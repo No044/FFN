@@ -17,13 +17,13 @@ const port = process.env.port;
 // app.set("view engine", "pug")
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(methodOverride('_method'));
-app.set("views","./views")
+app.set("views", `${__dirname}/views`);
 app.set("view engine", "pug")
 app.use(cookieParser('KJJSLKASASASA'));
 app.use(session({ cookie: { maxAge: 60000 }}));
 app.use(flash());
 app.locals.prefixAdmin = system.prefixAdmin
-app.use(express.static("public"))
+app.use(express.static(`${__dirname}/public`));
 router(app);
 routeradmin(app);
 connect.connect();
