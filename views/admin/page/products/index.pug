@@ -1,0 +1,114 @@
+extends ../../layout/index.pug
+
+block main 
+  - if (messages.nice)
+    div(
+      class="alert alert-success"
+      show-alert
+    ) #{messages.nice} <span close-alert>x</span>
+  h1 Danh sách Sản Phẩm
+  .card.mb-3 
+    .cart-header Bộ lọc và tìm kiếm 
+    .cart-body 
+      .row 
+        .col-6
+          each item in fillterStates
+            button(
+              class=`btn btn-sm ml-1 btn-outline-success ${item.class}`
+              button-status=item.status
+                ) #{item.name} 
+        .col-6
+          form(id="form-seach")
+            .input-group
+              input(type="text" placeholder="Nhập từ khóa" name="keyword" class="form-control" value=key)
+              .input-group-append
+                button(
+                  class="btn btn-success"
+                  type="submit"
+                ) Tìm
+
+  .card.mb-3 
+    .cart-header danh sách
+    .cart-body
+      .row 
+        .col-8 
+          form(
+            action=`/${prefixAdmin}/products/changeall?_method=PATCH`
+            method="POST"
+            form-change-multi
+          ) 
+            .d-flex.align-items-start
+              .form-group
+                select(name="type" class="form-control")
+                  option(value="active") Hoạt động
+                  option(value="inactive") Dừng hoạt động
+                  option(value="deleteall") Xoá Tất Cả
+              .form-group
+                input(
+                  type="text"
+                  name="ids"
+                  value=""
+                  class="form-control"
+                )
+              button(type="submit" class="btn btn-primary") Áp dụng
+        .col-4.text-right 
+           a(
+            href=`/${prefixAdmin}/products/create`
+            class="btn btn-outline-success"
+           ) + Thêm mới
+      table.table.table-hover.table-sm(checkboxfather)
+        thead
+          tr
+            th 
+              input(
+                  type="checkbox"
+                  name="checkall"
+                )
+            th STT
+            th Hình ảnh
+            th Tiêu đề
+            th Giá
+            th Trạng thái
+            th Hành động
+
+        tbody
+          each item, index in products
+            tr 
+              td 
+                input(type="checkbox" name="id" value=item.id )
+              td #{index + 1}
+              td
+                img(
+                  src=item.thumbnail
+                  alt=item.title
+                  width="100px"
+                  height="auto"
+                )
+              td #{item.title}
+              td #{item.price}$
+              td
+                if(item.status == "active")
+                  a(href="javascript:;" class="badge badge-success" buttonchangestatus status=item.status id=item.id) Hoạt động
+                else
+                  a(href="javascript:;" class="badge badge-danger" buttonchangestatus status=item.status id=item.id) Dừng hoạt động
+              td
+                button(class="btn btn-warning btn-sm") Sửa
+                button(class="btn btn-danger btn-sm ml-1" 
+                       button-delete data=item.id) Xóa
+  ul(class="pagination csspaginet")
+    if(paginet.start > 1)
+      li(class="page-item") 
+       button(class="page-link" buttonpaginet=1) Trang đầu
+    li(class="page-item") 
+      button(class="page-link" buttonpaginet=paginet.start - 1) Trang Trước
+    - for(let i = 0 ; i < paginet.totalpage ; i++)
+      li(class="page-item") 
+        button(class="page-link" buttonpaginet=i + 1) #{i + 1}
+    if(paginet.start < paginet.totalpage)
+        li(class="page-item") 
+        button(class="page-link" buttonpaginet=paginet.start + 1) Trang Sau
+    li(class="page-item")
+      button(class="page-link" buttonpaginet=paginet.totalpage ) Trang Cuối
+
+    form(action="" form-change-status method="POST" data-path=`/${prefixAdmin}/products/change`) 
+    form(action="" form-delete method="POST" data-path=`/${prefixAdmin}/products/delete`)
