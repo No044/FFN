@@ -1,19 +1,1418 @@
 extends ../../layout/layout.pug
 
 block main 
-  .container.my-3
-    .row
-      .col-12
-        //- +box-head("Danh sách sản phẩm")
-
-    .row
-      each item in products
-        .col-4.mb-3
-          .product-item
-            .inner-image
-              img(src=item.thumbnail, alt=item.title)
-            .inner-content
-              h3.inner-title #{item.title}
-              .inner-price-new #{item.priceNew}$
-              .inner-price-old #{item.price}$
-              .inner-discount -#{item.discountPercentage}%
+    .containerphicss 
+        // Start navbar container
+        .tc-navbar-container-style3                   
+          // Start products
+          section.tc-products-style6.p-30.radius-4.bg-white.mt-3.wow.fadeInUp
+            .row
+              .col-lg-3
+                .filters
+                  //- .category-box
+                    h6.fsz-18.fw-bold.text-uppercase.mb-20  categories 
+                    a.cat-btn.fsz-12.fw-bold.py-2.px-3.bg-white.radius-3.hover-bg-green2(href='#')
+                      i.la.la-angle-left.me-2
+                      |  All Categories
+                    .cat-list.pt-20
+                      h6.fsz-14.fw-bold.mb-20  Cell Phones &amp; Tablets 
+                      ul
+                        li
+                          a(href='#')  All 
+                        li
+                          a(href='#')  Iphone 
+                        li
+                          a(href='#')  Samsung 
+                        li
+                          a(href='#')  Xiaomi 
+                        li
+                          a(href='#')  Asus 
+                        li
+                          a(href='#')  Oppo 
+                        li
+                          a(href='#')  Gaming Smartphone 
+                        li
+                          a(href='#')  Ipad 
+                        li
+                          a(href='#')  Window Tablets 
+                        li
+                          a(href='#')  eReader 
+                        li
+                          a(href='#')  Smartphone Chargers 
+                        li
+                          a(href='#')  5G Support Smartphone 
+                        li
+                          a(href='#')  Smartphone Accessories 
+                        li
+                          a(href='#')  Tablets Accessories 
+                        li
+                          a(href='#')
+                            | Cell Phones 
+                            i.la.la-angle-left
+                            |  $200
+                  .filter-box.mt-10
+                    .title.mb-20
+                      h6.fsz-18.fw-bold.text-uppercase  categories 
+                      a.rest-btn.hover-green2(href='#')
+                        i.la.la-sync.me-1
+                        |  Reset All
+                    .selected-filters
+                      span.selected-item
+                        | Min: $45.00 
+                        i.la.la-times.ms-1
+                      span.selected-item
+                        | 10.9 inch 
+                        i.la.la-times.ms-1
+                      span.selected-item
+                        | Color: Red 
+                        i.la.la-times.ms-1
+                      span.selected-item
+                        | 128GB 
+                        i.la.la-times.ms-1
+                    .filter-groups
+                      .filter-group
+                        .group-title
+                          strong.fsz-14  By Brands 
+                          span.arrow
+                            i.la.la-angle-up
+                        .group-body
+                          .search-group
+                            input.form-control(type='text' placeholder='')
+                            button.search-btn
+                              i.la.la-search
+                          .scroll-cont
+                            .check-group.check-brands
+                              .form-check
+                                input#brand1.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand1')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand1.png' alt='')
+                                    span.color-888.ms-2  (14) 
+                              .form-check
+                                input#brand2.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand2')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand2.png' alt='')
+                                    span.color-888.ms-2  (6) 
+                              .form-check
+                                input#brand3.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand3')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand3.png' alt='')
+                                    span.color-888.ms-2  (7) 
+                              .form-check
+                                input#brand4.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand4')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand4.png' alt='')
+                                    span.color-888.ms-2  (18) 
+                              .form-check
+                                input#brand5.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand5')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand5.png' alt='')
+                                    span.color-888.ms-2  (1) 
+                              .form-check
+                                input#brand6.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand6')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand1.png' alt='')
+                                    span.color-888.ms-2  (14) 
+                              .form-check
+                                input#brand7.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand7')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand2.png' alt='')
+                                    span.color-888.ms-2  (7) 
+                              .form-check
+                                input#brand8.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand8')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand3.png' alt='')
+                                    span.color-888.ms-2  (18) 
+                              .form-check
+                                input#brand9.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand9')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand4.png' alt='')
+                                    span.color-888.ms-2  (4) 
+                              .form-check
+                                input#brand10.form-check-input(type='checkbox' value='')
+                                label.form-check-label(for='brand10')
+                                  .d-inline-flex.align-items-center
+                                    img.brand-img(src='images/brand5.png' alt='')
+                                    span.color-888.ms-2  (1) 
+                      .filter-group
+                        .group-title
+                          strong.fsz-14  By Price 
+                          span.arrow
+                            i.la.la-angle-up
+                        .group-body
+                          .price-card
+                            .slider
+                              .progress
+                            .range-input
+                              input.range-min(type='range' min='0' max='10000' value='0' step='100')
+                              input.range-max(type='range' min='0' max='10000' value='10000' step='100')
+                            .row.mt-20.align-items-center.gx-0
+                              .col-9
+                                .price-input
+                                  .field
+                                    span.sympol $
+                                    input.input-min(type='number' value='0')
+                                  .separator
+                                  .field
+                                    span.sympol $
+                                    input.input-max(type='number' value='10000')
+                              .col-3.text-end
+                                button.bttn  go 
+                      .filter-group
+                        .group-title
+                          strong.fsz-14  By Rating 
+                          span.arrow
+                            i.la.la-angle-up
+                        .group-body
+                          .check-group.check-stars
+                            .form-check
+                              input#rate1.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='rate1')
+                                .rate.ms-1
+                                  .stars
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star
+                                  span.num.fsz-12.ms-2  (52) 
+                            .form-check
+                              input#rate2.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='rate2')
+                                .rate.ms-1
+                                  .stars
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star.color-999
+                                  span.num.fsz-12.ms-2  (24) 
+                            .form-check
+                              input#rate3.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='rate3')
+                                .rate.ms-1
+                                  .stars
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star.color-999
+                                    i.la.la-star.color-999
+                                  span.num.fsz-12.ms-2  (5) 
+                            .form-check
+                              input#rate4.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='rate4')
+                                .rate.ms-1
+                                  .stars
+                                    i.la.la-star
+                                    i.la.la-star
+                                    i.la.la-star.color-999
+                                    i.la.la-star.color-999
+                                    i.la.la-star.color-999
+                                  span.num.fsz-12.ms-2  (1) 
+                            //
+                              <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="rate5">
+                              <label class="form-check-label" for="rate5">
+                              <div class="rate ms-1">
+                              <div class="stars">
+                              <i class="la la-star"></i>
+                              <i class="la la-star color-999"></i>
+                              <i class="la la-star color-999"></i>
+                              <i class="la la-star color-999"></i>
+                              <i class="la la-star color-999"></i>
+                              </div>
+                              <span class="num fsz-12 ms-2"> (3) </span>
+                              </div>
+                              </label>
+                              </div>
+                      .filter-group
+                        .group-title
+                          strong.fsz-14  By Screen Size 
+                          span.arrow
+                            i.la.la-angle-up
+                        .group-body
+                          .check-boxes
+                            .form-check
+                              input#check1.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='check1')
+                                span  7&rdquo; &amp; Under 
+                            .form-check
+                              input#check2.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='check2')
+                                span  7.1&rdquo; - 8.9&rdquo; 
+                            .form-check
+                              input#check3.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='check3')
+                                span  9&rdquo; - 10.9&rdquo; 
+                            .form-check
+                              input#check4.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='check4')
+                                span  11&rdquo; &amp; Greater 
+                      .filter-group
+                        .group-title
+                          strong.fsz-14  By Color 
+                          span.arrow
+                            i.la.la-angle-up
+                        .group-body
+                          .color-boxes
+                            .form-check
+                              input#color1.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='color1')
+                                span.color-box.card-red
+                                  i.la.la-check
+                            .form-check
+                              input#color2.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='color2')
+                                span.color-box.card-blue
+                                  i.la.la-check
+                            .form-check
+                              input#color3.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='color3')
+                                span.color-box.card-cyan
+                                  i.la.la-check
+                            .form-check
+                              input#color4.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='color4')
+                                span.color-box.card-black
+                                  i.la.la-check
+                            .form-check
+                              input#color5.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='color5')
+                                span.color-box.card-white
+                                  i.la.la-check
+                            .form-check
+                              input#color6.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='color6')
+                                span.color-box.card-green
+                                  i.la.la-check
+                            .form-check
+                              input#color7.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='color7')
+                                span.color-box.card-gray
+                                  i.la.la-check
+                            .form-check
+                              input#color8.form-check-input(type='checkbox' value='')
+                              label.form-check-label(for='color8')
+                                span.color-box.card-purple
+                                  i.la.la-check
+                      .filter-group
+                        .group-title
+                          strong.fsz-14  By Memory 
+                          span.arrow
+                            i.la.la-angle-up
+                        .group-body
+                          .row
+                            .col-lg-6
+                              .check-group
+                                .form-check
+                                  input#memory1.form-check-input(type='checkbox' value='')
+                                  label.form-check-label.fsz-13(for='memory1')
+                                    p
+                                      | 12GB 
+                                      span.color-888  (4) 
+                              .check-group
+                                .form-check
+                                  input#memory2.form-check-input(type='checkbox' value='')
+                                  label.form-check-label.fsz-13(for='memory2')
+                                    p
+                                      | 8GB 
+                                      span.color-888  (3) 
+                              .check-group
+                                .form-check
+                                  input#memory3.form-check-input(type='checkbox' value='')
+                                  label.form-check-label.fsz-13(for='memory3')
+                                    p
+                                      | 6GB 
+                                      span.color-888  (12) 
+                              .check-group
+                                .form-check
+                                  input#memory4.form-check-input(type='checkbox' value='')
+                                  label.form-check-label.fsz-13(for='memory4')
+                                    p
+                                      | 4GB 
+                                      span.color-888  (6) 
+                              .check-group
+                                .form-check
+                                  input#memory5.form-check-input(type='checkbox' value='')
+                                  label.form-check-label.fsz-13(for='memory5')
+                                    p
+                                      | 3GB 
+                                      span.color-888  (7) 
+                            .col-lg-6
+                              .check-group
+                                .form-check
+                                  input#memory6.form-check-input(type='checkbox' value='')
+                                  label.form-check-label.fsz-13(for='memory6')
+                                    p
+                                      | 1.5GB 
+                                      span.color-888  (1) 
+                              .check-group
+                                .form-check
+                                  input#memory7.form-check-input(type='checkbox' value='')
+                                  label.form-check-label.fsz-13(for='memory7')
+                                    p
+                                      | 1GB 
+                                      span.color-888  (1) 
+                              .check-group
+                                .form-check
+                                  input#memory8.form-check-input(type='checkbox' value='')
+                                  label.form-check-label.fsz-13(for='memory8')
+                                    p
+                                      | 512MB 
+                                      span.color-888  (2) 
+                      .filter-group
+                        .group-title
+                          strong.fsz-14  By Conditions 
+                          span.arrow
+                            i.la.la-angle-up
+                        .group-body
+                          .check-group
+                            .form-check
+                              input#con1.form-check-input(type='checkbox' value='')
+                              label.form-check-label.fsz-13(for='con1')
+                                p
+                                  | New 
+                                  span.color-888  (21) 
+                          .check-group
+                            .form-check
+                              input#con2.form-check-input(type='checkbox' value='')
+                              label.form-check-label.fsz-13(for='con2')
+                                p
+                                  | Like New 
+                                  span.color-888  (2) 
+                          .check-group
+                            .form-check
+                              input#con3.form-check-input(type='checkbox' value='')
+                              label.form-check-label.fsz-13(for='con3')
+                                p
+                                  | Open Box 
+                                  span.color-888  (38) 
+                  .addimg.mt-10
+                    img.img-cover(src='images/addimg.png' alt='')
+                    .inf
+                      h6.fsz-24.mb-30.text-white
+                        strong  OKODo 
+                        |  hero 11+ 
+                        br
+                        |  5K wireless
+                      .price
+                        p.fsz-12.color-999.text-uppercase  from 
+                        h5.fsz-30.fw-400  $169 
+              .col-lg-9
+                //- .best-seller.mt-5.mt-lg-0
+                  h6.fsz-18.fw-bold.text-uppercase.mb-30  Best seller in this category 
+                  .main-content
+                    .best-slider6
+                      .swiper-wrapper
+                        .swiper-slide
+                          .product-card
+                            .top-inf
+                              a.fav-btn(href='#0')
+                                i.las.la-heart
+                            a.img(href='../inner_pages/single_product.html')
+                              img.img-contain.main-image(src='images/prod9.png' alt='')
+                            .info
+                              .rating
+                                .stars
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star.color-999
+                                span.num  (152) 
+                              h6
+                                a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  BOSO 2 Wireless On Ear Headphone 
+                              .price.mt-15
+                                h5.fsz-18.fw-600  $359.00 
+                              .meta
+                                a.meta-item.color-green2(href='#')
+                                  | free shipping 
+                                  span.bg.bg-green2
+                                a.meta-item.color-red1(href='#')
+                                  | free gift 
+                                  span.bg.bg-red1
+                              p.fsz-12.mt-2
+                                i.fas.fa-check-circle.color-green2.me-1
+                                |  In stock
+                              .thumbnail-imgs.mt-10
+                                span.color-img.icon-40
+                                  img.thumbnail.selected(src='images/prod9.png' alt='')
+                                span.color-img.icon-40
+                                  img.thumbnail(src='images/cl_1.jpg' alt='')
+                              a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-green2.addCart(href='#0')
+                                span  Add To Cart 
+                        .swiper-slide
+                          .product-card
+                            .top-inf
+                              .dis-card
+                                small.fsz-10.d-block.text-uppercase  save 
+                                h6.fsz-14  $199.00 
+                              a.fav-btn(href='#0')
+                                i.las.la-heart
+                            a.img(href='../inner_pages/single_product.html')
+                              img.img-contain.main-image(src='images/prod10.png' alt='')
+                            .info
+                              .rating
+                                .stars
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                span.num  (152) 
+                              h6
+                                a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  OPod Pro 12.9 Inch M1 2023, 64GB + Wifi, GPS 
+                              .price.mt-15
+                                h5.fsz-18.color-red1.fw-600
+                                  | $569.00 
+                                  span.old.fsz-14.color-666.text-decoration-line-through  $759.00 
+                              .meta
+                                a.meta-item.color-green2(href='#')
+                                  | free shipping 
+                                  span.bg.bg-green2
+                              p.fsz-12.mt-2
+                                i.fas.fa-check-circle.color-green2.me-1
+                                |  In stock
+                              a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-green2.addCart(href='#0')
+                                span  Add To Cart 
+                        .swiper-slide
+                          .product-card
+                            .top-inf
+                              .dis-card
+                                small.fsz-10.d-block.text-uppercase  save 
+                                h6.fsz-14  $59.00 
+                              a.fav-btn(href='#0')
+                                i.las.la-heart
+                            a.img(href='../inner_pages/single_product.html')
+                              img.img-contain.main-image(src='images/prod11.png' alt='')
+                            .info
+                              .rating
+                                .stars
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star-half
+                                span.num  (8) 
+                              h6
+                                a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  uLosk Mini case 2.0,  Xenon i10 / 32GB / SSD 512GB / VGA 8GB 
+                              .price.mt-15
+                                h5.fsz-18.color-red1.fw-600
+                                  | $1,729.00 
+                                  span.old.fsz-14.color-666.text-decoration-line-through  $2,119.00 
+                              .meta
+                                a.meta-item.color-green2(href='#')
+                                  | free shipping 
+                                  span.bg.bg-green2
+                              p.fsz-12.mt-2
+                                i.fas.fa-times-circle.color-red1.me-1
+                                |  Out of stock
+                              a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-green2.addCart(href='#0')
+                                span  Add To Cart 
+                        .swiper-slide
+                          .product-card
+                            .top-inf
+                              a.fav-btn(href='#0')
+                                i.las.la-heart
+                            a.img(href='../inner_pages/single_product.html')
+                              img.img-contain.main-image(src='images/prod12.png' alt='')
+                            .info
+                              h6
+                                a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Opplo Watch Series 8 GPS + Cellular Stainless Steel Case with Milanese Loop 
+                              .price.mt-15
+                                h5.fsz-18.fw-600  $979.00 - $1,259.00 
+                              .meta
+                                a.meta-item.color-222(href='#')
+                                  | $2.98 Shipping 
+                                  span.bg.bg-222
+                              p.fsz-12.mt-2.text-uppercase  PRE - ORDER 
+                              a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-green2.addCart(href='#0')
+                                span  Add To Cart 
+                        .swiper-slide
+                          .product-card
+                            .top-inf
+                              .dis-card
+                                small.fsz-10.d-block.text-uppercase  save 
+                                h6.fsz-14  $3.00 
+                              a.fav-btn(href='#0')
+                                i.las.la-heart
+                            a.img(href='../inner_pages/single_product.html')
+                              img.img-contain.main-image(src='images/prod13.png' alt='')
+                            .info
+                              .rating
+                                .stars
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                span.num  (9) 
+                              h6
+                                a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  iSmart 24V Charger 
+                              .price.mt-15
+                                h5.fsz-18.color-red1.fw-600
+                                  | $9.00 
+                                  span.old.fsz-14.color-666.text-decoration-line-through  $12.00 
+                              .meta
+                                a.meta-item.color-222(href='#')
+                                  | $3.98 Shipping 
+                                  span.bg.bg-222
+                              p.fsz-12.mt-2
+                                i.fas.fa-phone-alt.me-1
+                                a(href='#')  Contact 
+                              a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-green2.addCart(href='#0')
+                                span  Add To Cart 
+                        .swiper-slide
+                          .product-card
+                            .top-inf
+                              .dis-card
+                                small.fsz-10.d-block.text-uppercase  save 
+                                h6.fsz-14  $199.00 
+                              a.fav-btn(href='#0')
+                                i.las.la-heart
+                            a.img(href='../inner_pages/single_product.html')
+                              img.img-contain.main-image(src='images/prod10.png' alt='')
+                            .info
+                              .rating
+                                .stars
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                span.num  (152) 
+                              h6
+                                a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  OPod Pro 12.9 Inch M1 2023, 64GB + Wifi, GPS 
+                              .price.mt-15
+                                h5.fsz-18.color-red1.fw-600
+                                  | $569.00 
+                                  span.old.fsz-14.color-666.text-decoration-line-through  $759.00 
+                              .meta
+                                a.meta-item.color-green2(href='#')
+                                  | free shipping 
+                                  span.bg.bg-green2
+                              p.fsz-12.mt-2
+                                i.fas.fa-check-circle.color-green2.me-1
+                                |  In stock
+                              a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-green2.addCart(href='#0')
+                                span  Add To Cart 
+                        .swiper-slide
+                          .product-card
+                            .top-inf
+                              .dis-card
+                                small.fsz-10.d-block.text-uppercase  save 
+                                h6.fsz-14  $59.00 
+                              a.fav-btn(href='#0')
+                                i.las.la-heart
+                            a.img(href='../inner_pages/single_product.html')
+                              img.img-contain.main-image(src='images/prod11.png' alt='')
+                            .info
+                              .rating
+                                .stars
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star
+                                  i.la.la-star-half
+                                span.num  (8) 
+                              h6
+                                a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  uLosk Mini case 2.0,  Xenon i10 / 32GB / SSD 512GB / VGA 8GB 
+                              .price.mt-15
+                                h5.fsz-18.color-red1.fw-600
+                                  | $1,729.00 
+                                  span.old.fsz-14.color-666.text-decoration-line-through  $2,119.00 
+                              .meta
+                                a.meta-item.color-green2(href='#')
+                                  | free shipping 
+                                  span.bg.bg-green2
+                              p.fsz-12.mt-2
+                                i.fas.fa-times-circle.color-red1.me-1
+                                |  Out of stock
+                              a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-green2.addCart(href='#0')
+                                span  Add To Cart 
+                    .swiper-button-next
+                    .swiper-button-prev
+                .products-content
+                  .prod-filter.color-666
+                    .row.align-items-center
+                      .col-lg-2
+                        p
+                          strong.color-000  1 - 40 
+                          |  of 120 results
+                      .col-lg-4.mt-3.mt-lg-0
+                        .show-item
+                          span.s-title  Show item 
+                          .show-numbs
+                            a.active(href='#')  24 
+                            a(href='#')  48 
+                            a(href='#')  72 
+                      .col-lg-4.mt-3.mt-lg-0
+                        .sort-item
+                          span.s-title  Show item 
+                          select.form-control.form-select(name='' id='')
+                            option(value='') Default
+                            option(value='') best seller
+                            option(value='') price
+                      .col-lg-2.text-lg-end.mt-3.mt-lg-0
+                        .view-item
+                          span.s-title  View As 
+                          span.v-item.grid-btn.active
+                            i.la.la-th-large
+                          span.v-item.list-btn
+                            i.la.la-list-ul
+                  .products
+                    .row
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            .dis-card
+                              small.fsz-10.d-block.text-uppercase  save 
+                              h6.fsz-14  $199.00 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod26.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                              span.num  (152) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  SROK Smart Phone 128GB, Oled Retina 
+                            .price.mt-15
+                              h5.fsz-18.color-red1.fw-600
+                                | $579.00 
+                                span.old.fsz-14.color-666.text-decoration-line-through  $859.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod27.png' alt='')
+                          .info
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  aPod Pro Tablet 2023  LTE + Wifi, GPS Cellular 12.9 Inch, 512GB 
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $979.00 - $1,259.00 
+                            .meta
+                              a.meta-item.color-222(href='#')
+                                | $2.98 Shipping 
+                                span.bg.bg-222
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod65.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star.color-999
+                              span.num  (5) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Samsung Galaxy X6 Ultra LTE 4G/128 Gb, Black  Smartphone  
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $659.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                              a.meta-item.color-red1(href='#')
+                                | free gift 
+                                span.bg.bg-red1
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                            .thumbnail-imgs.mt-10
+                              span.color-img.icon-40
+                                img.thumbnail.selected(src='images/prod65.png' alt='')
+                              span.color-img.icon-40
+                                img.thumbnail(src='images/prod24.png' alt='')
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            .dis-card
+                              small.fsz-10.d-block.text-uppercase  save 
+                              h6.fsz-14  $59.00 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod29.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                              span.num  (9) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Xiamoi Redmi Note 5, 64GB 
+                            .price.mt-15
+                              h5.fsz-18.color-red1.fw-600
+                                | $1,239.00 
+                                span.old.fsz-14.color-666.text-decoration-line-through  $1,619.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-phone-alt.me-1
+                              a(href='#')  Contact 
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod30.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star-half
+                              span.num  (8) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Microsute Alpha Ultra S5 Surface 128GB 2022, Sliver 
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $1,729.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-phone-alt.me-1
+                              a(href='#')  Contact 
+                            .thumbnail-imgs.mt-10
+                              span.color-img.icon-40
+                                img.thumbnail(src='images/prod30.png' alt='')
+                              span.color-img.icon-40
+                                img.thumbnail(src='images/prod10.png' alt='')
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            .dis-card
+                              small.fsz-10.d-block.text-uppercase  save 
+                              h6.fsz-14  $199.00 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod10.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star.color-999
+                                i.la.la-star.color-999
+                              span.num  (152) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  OPod Pro 12.9 Inch M1 2023, 64GB + Wifi, GPS 
+                            .price.mt-15
+                              h5.fsz-18.color-red1.fw-600
+                                | $569.00 
+                                span.old.fsz-14.color-666.text-decoration-line-through  $759.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod5.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                              span.num  (2) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Xioma Redmi Note 11 Pro 256GB 2023, Black Smartphone 
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $59.00 - $129.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod66.png' alt='')
+                          .info
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular  
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $279.00 
+                            .meta
+                              a.meta-item.color-222(href='#')
+                                | $2.98 Shipping 
+                                span.bg.bg-222
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod67.png' alt='')
+                          .info
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Lenovo Redmi Note 5, 64GB 
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $69.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod68.png' alt='')
+                          .info
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  LG Pro Tablet 2023 LTE + Wifi, GPS Cellular 
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $179.00 - $429.00 
+                            .meta
+                              a.meta-item.color-222(href='#')
+                                | $2.98 Shipping 
+                                span.bg.bg-222
+                            p.fsz-12.mt-2  PRE-ORDER 
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  out of stock 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod69.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star.color-999
+                              span.num  (5) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Samsung Galaxy X6 Ultra LTE 4G/128 Gb, Black  Smartphone  
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $659.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                              a.meta-item.color-red1(href='#')
+                                | free gift 
+                                span.bg.bg-red1
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            .dis-card
+                              small.fsz-10.d-block.text-uppercase  save 
+                              h6.fsz-14  $199.00 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod26.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                              span.num  (152) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  SROK Smart Phone 128GB, Oled Retina 
+                            .price.mt-15
+                              h5.fsz-18.color-red1.fw-600
+                                | $579.00 
+                                span.old.fsz-14.color-666.text-decoration-line-through  $859.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            .dis-card
+                              small.fsz-10.d-block.text-uppercase  save 
+                              h6.fsz-14  $199.00 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod70.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                              span.num  (152) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  SROK Smart Phone 128GB, Oled Retina 
+                            .price.mt-15
+                              h5.fsz-18.color-red1.fw-600
+                                | $579.00 
+                                span.old.fsz-14.color-666.text-decoration-line-through  $859.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod27.png' alt='')
+                          .info
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  aPod Pro Tablet 2023  LTE + Wifi, GPS Cellular 12.9 Inch, 512GB 
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $979.00 - $1,259.00 
+                            .meta
+                              a.meta-item.color-222(href='#')
+                                | $2.98 Shipping 
+                                span.bg.bg-222
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod65.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star.color-999
+                              span.num  (5) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Samsung Galaxy X6 Ultra LTE 4G/128 Gb, Black  Smartphone  
+                            .price.mt-15
+                              h5.fsz-18.fw-600  $659.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                              a.meta-item.color-red1(href='#')
+                                | free gift 
+                                span.bg.bg-red1
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green2.me-1
+                              |  In stock
+                      .col-lg-3
+                        .product-card
+                          .top-inf
+                            .dis-card
+                              small.fsz-10.d-block.text-uppercase  save 
+                              h6.fsz-14  $59.00 
+                            a.fav-btn(href='#0')
+                              i.las.la-heart
+                          a.img(href='../inner_pages/single_product.html')
+                            img.img-contain.main-image(src='images/prod29.png' alt='')
+                          .info
+                            .rating
+                              .stars
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                                i.la.la-star
+                              span.num  (9) 
+                            h6
+                              a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='../inner_pages/single_product.html')  Xiamoi Redmi Note 5, 64GB 
+                            .price.mt-15
+                              h5.fsz-18.color-red1.fw-600
+                                | $1,239.00 
+                                span.old.fsz-14.color-666.text-decoration-line-through  $1,619.00 
+                            .meta
+                              a.meta-item.color-green2(href='#')
+                                | free shipping 
+                                span.bg.bg-green2
+                            p.fsz-12.mt-2
+                              i.fas.fa-phone-alt.me-1
+                              a(href='#')  Contact 
+                  nav(aria-label='Page navigation example')
+                    ul.pagination
+                      li.page-item
+                        a.page-link.active(href='#') 1
+                      li.page-item
+                        a.page-link(href='#') 2
+                      li.page-item
+                        a.page-link(href='#') 3
+                      li.page-item
+                        a.page-link(href='#') 4
+                      li.page-item
+                        a.page-link(href='#') ...
+                      li.page-item
+                        a.page-link(href='#') 20
+                      li.page-item
+                        a.page-link(href='#')
+                          | Next 
+                          i.la.la-angle-right.ms-1
+          // End products
+          // Start recently
+          section.tc-recently-viewed-style6.p-30.radius-4.bg-white.mt-3.wow.fadeInUp.mb-3
+            .title.mb-30
+              .row.align-items-center
+                .col-lg-8
+                  h6.fsz-18.fw-bold.text-uppercase.d-inline-block  your recently viewed 
+                  a.more.text-capitalize.color-666.fsz-13.ms-lg-4.mt-4.mt-lg-0(href='#')
+                    | View All 
+                    i.la.la-angle-right.ms-1
+                .col-lg-4.text-lg-end.mt-3.mt-lg-0
+                  .arrows
+                    .swiper-button-next
+                    .swiper-button-prev
+            .products-slider
+              .swiper-wrapper
+                .swiper-slide
+                  .product-card
+                    .top-inf
+                      small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+                      a.fav-btn(href='#0')
+                        i.las.la-heart
+                    .row.gx-0
+                      .col-5
+                        a.img(href='#')
+                          img.img-contain(src='images/prod58.png' alt='')
+                      .col-7
+                        .info
+                          .rating
+                            .stars
+                              i.la.la-star
+                              i.la.la-star
+                              i.la.la-star
+                              i.la.la-star
+                              i.la.la-star.color-999
+                            span.num  (152) 
+                          a.title.fsz-13.fw-bold.mb-15.hover-green2.pe-3(href='#')  Xomie Remid 8 Sport Water Resitance Watch 
+                          h6.fsz-16.fw-bold  $579.00 
+                .swiper-slide
+                  .product-card
+                    .top-inf
+                      small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+                      a.fav-btn(href='#0')
+                        i.las.la-heart
+                    .row.gx-0
+                      .col-5
+                        a.img(href='#')
+                          img.img-contain(src='images/prod59.png' alt='')
+                      .col-7
+                        .info
+                          a.title.fsz-13.fw-bold.mb-15.hover-green2.pe-3(href='#')  Microte Surface 2.0 Laptop 
+                          h6.fsz-16.fw-bold  $979.00 
+                .swiper-slide
+                  .product-card
+                    .top-inf
+                      a.fav-btn(href='#0')
+                        i.las.la-heart
+                    .row.gx-0
+                      .col-5
+                        a.img(href='#')
+                          img.img-contain(src='images/prod60.png' alt='')
+                      .col-7
+                        .info
+                          a.title.fsz-13.fw-bold.mb-15.hover-green2.pe-3(href='#')  aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular 12.9 Inch, 512GB 
+                          h6.fsz-16.fw-bold  $979.00 - $1,259.00 
+                .swiper-slide
+                  .product-card
+                    .top-inf
+                      .dis-card
+                        small.fsz-10.d-block.text-uppercase  save 
+                        h6.fsz-10  $192.00 
+                      a.fav-btn(href='#0')
+                        i.las.la-heart
+                    .row.gx-0
+                      .col-5
+                        a.img(href='#')
+                          img.img-contain(src='images/prod61.png' alt='')
+                      .col-7
+                        .info
+                          .rating
+                            .stars
+                              i.la.la-star
+                              i.la.la-star
+                              i.la.la-star
+                              i.la.la-star
+                              i.la.la-star.color-999
+                            span.num  (152) 
+                          a.title.fsz-13.fw-bold.mb-15.hover-green2.pe-3(href='#')  SROK Smart Phone 128GB, Oled Retina 
+                          h6.fsz-16.fw-bold
+                            span.color-red1.fw-600  $579.00  
+                            span.old.fsz-14.color-666.text-decoration-line-through.ms-2  $779.00 
+                .swiper-slide
+                  .product-card
+                    .top-inf
+                      a.fav-btn(href='#0')
+                        i.las.la-heart
+                    .row.gx-0
+                      .col-5
+                        a.img(href='#')
+                          img.img-contain(src='images/prod60.png' alt='')
+                      .col-7
+                        .info
+                          a.title.fsz-13.fw-bold.mb-15.hover-green2.pe-3(href='#')  aPod Pro Tablet 2023 LTE + Wifi, GPS Cellular 12.9 Inch, 512GB 
+                          h6.fsz-16.fw-bold  $979.00 - $1,259.00 
+          // End recently
+        // End-Contents
+    // Start footer
+    //- footer.tc-footer-style3
+      .container
+        .footer-content
+          .row
+            .col-lg-4
+              .foot-info
+                h6.fsz-18.fw-bold.mb-30.text-uppercase  Swoo - 1st NYC tech online market 
+                p.text-uppercase  hotline 24/7 
+                h4.fsz-30.fw-bold.color-green2.mb-30  (025) 3686 25 16 
+                p.fsz-14.color-000
+                  | 257 Thatcher Road St, Brooklyn, Manhattan, 
+                  br
+                  |  NY 10092
+                a.fsz-14.color-000(href='#')  contact@Swootechmart.com 
+                .foot-social.mt-40
+                  a(href='#')
+                    i.fab.fa-twitter
+                  a(href='#')
+                    i.fab.fa-facebook-f
+                  a(href='#')
+                    i.fab.fa-instagram
+                  a(href='#')
+                    i.fab.fa-youtube
+                  a(href='#')
+                    i.fab.fa-pinterest
+            .col-lg-2
+              .links
+                h6.fsz-18.fw-bold.mb-30.text-uppercase  top Categories 
+                ul.links-list
+                  li
+                    a(href='#')  Laptops 
+                  li
+                    a(href='#')  PC &amp; Computers 
+                  li
+                    a(href='#')  Cell Phones 
+                  li
+                    a(href='#')  Tablets 
+                  li
+                    a(href='#')  Gaming &amp; VR 
+                  li
+                    a(href='#')  networks 
+                  li
+                    a(href='#')  Cameras 
+                  li
+                    a(href='#')  Sounds 
+                  li
+                    a(href='#')  Office 
+            .col-lg-2
+              .links
+                h6.fsz-18.fw-bold.mb-30.text-uppercase  company 
+                ul.links-list
+                  li
+                    a(href='#')  About Swoo 
+                  li
+                    a(href='#')  Contact 
+                  li
+                    a(href='#')  Career 
+                  li
+                    a(href='#')  Blog 
+                  li
+                    a(href='#')  Sitemap 
+                  li
+                    a(href='#')  Store Locations 
+            .col-lg-2
+              .links
+                h6.fsz-18.fw-bold.mb-30.text-uppercase  help center 
+                ul.links-list
+                  li
+                    a(href='#')  Customer Service 
+                  li
+                    a(href='#')  Policy 
+                  li
+                    a(href='#')  Terms &amp; Conditions 
+                  li
+                    a(href='#')  Trach Order 
+                  li
+                    a(href='#')  FAQs 
+                  li
+                    a(href='#')  My Account 
+                  li
+                    a(href='#')  Product Support 
+            .col-lg-2
+              .links
+                h6.fsz-18.fw-bold.mb-30.text-uppercase  partner 
+                ul.links-list
+                  li
+                    a(href='#')  Become Seller 
+                  li
+                    a(href='#')  Affiliate 
+                  li
+                    a(href='#')  Advertise 
+                  li
+                    a(href='#')  Partnership 
+          .footer-btm-info.mt-60
+            .row
+              .col-lg-4
+                .dropdowns
+                  ul.links-ul
+                    li.dropdown
+                      a#navbarDropdown.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        i.la.la-dollar-sign.me-1
+                        |  USD
+                      ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                        li
+                          a.dropdown-item(href='#') USD
+                        li
+                          a.dropdown-item(href='#') USD
+                    li.dropdown
+                      a#navbarDropdown1.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        img.me-1.icon-15(src='images/eng.png' alt='')
+                        |  Eng
+                      ul.dropdown-menu(aria-labelledby='navbarDropdown1' style='')
+                        li
+                          a.dropdown-item(href='#') Arabic
+              .col-lg-8
+                .subscribe-content
+                  h6.fsz-18.fw-bold.mb-30.text-uppercase
+                    | subscribe &amp; get 
+                    span.color-red1  10% off 
+                    |  for your first order
+                  .form-group
+                    span.icon
+                      i.la.la-envelope
+                    input(type='text' placeholder='Enter your email address')
+                    button
+                      | subscribe 
+                      i.la.la-long-arrow-right.ms-2.fsz-18
+                  p.fsz-13.fst-italic.color-666.mt-2
+                    | By subscribing, you&rsquo;re accepted the our 
+                    a.color-000.text-decoration-underline(href='#')  Policy 
+        .foot
+          .row.align-items-center
+            .col-lg-4.text-center.text-lg-start
+              p.color-666
+                | &copy; 2024 
+                strong.color-000  Swoo 
+                | . All Rights Reserved
+            .col-lg-4
+              .pay-imgs.text-center.my-3.my-lg-0
+                img(src='images/pay1.png' alt='')
+                img(src='images/pay2.png' alt='')
+                img(src='images/pay3.png' alt='')
+                img(src='images/pay4.png' alt='')
+                img(src='images/pay5.png' alt='')
+            .col-lg-4.text-center.text-lg-end
+              a.text-primary(href='#')
+                i.la.la-mobile.me-1.fsz-16
+                |  Mobile Site
+      .mob-navigation.d-flex.d-lg-none
+        ul
+          li.list
+            a(href='#0')
+              span.icon
+                i.las.la-sync-alt
+              span.text Compare
+          li.list
+            a(href='#0')
+              span.icon
+                i.lar.la-heart
+              span.text Favorite
+          li.list.active
+            a(href='#0')
+              span.icon
+                i.las.la-home
+              span.text Home
+          li.list
+            a(href='#0')
+              span.icon
+                i.las.la-shopping-bag
+              span.text Cart
+          li.list
+            a(href='#0')
+              span.icon
+                i.las.la-user
+              span.text Profile
+          li.indicator

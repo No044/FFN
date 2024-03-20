@@ -1,4 +1,5 @@
 const products = require("../../models/products")
+const Category = require("../../models/category")
 const system = require("../../setting/system")
 
 module.exports.index = async (req, res) => {
@@ -24,7 +25,22 @@ module.exports.index = async (req, res) => {
     start: 0,
     limit: 4
   }
+  
+  const find = {
+    deleted: false
+  }
+
+  const sort = {}
+  if(req.query.sortkey)
+  {
+   sort[req.query.sortkey] = req.query.sortvalue
+  }
+  else{
+    sort["position"] = "desc"
+  }
+
   let uppdatestart = req.query.page
+
   if (req.query.status) {
     const index = fillterState.findIndex((item) => {
       return (
@@ -37,16 +53,15 @@ module.exports.index = async (req, res) => {
     fillterState[0].class = "active"
   }
 
-  const find = {
-    deleted: false
-  }
   if (req.query.status) {
     find.status = req.query.status
   }
+
   if (req.query.key) {
     const regex = new RegExp(req.query.key, "i")
     find.title = regex
   }
+
   const countproduct = await products.countDocuments(find);
   paginet.totalpage = Math.round(countproduct / paginet.limit)
   if (req.query.page && parseInt(uppdatestart) > 0 && parseInt(uppdatestart) <= paginet.totalpage) {
@@ -56,8 +71,9 @@ module.exports.index = async (req, res) => {
     paginet.start = 1
     paginet.skip = (paginet.start - 1) * paginet.limit
   }
+
   const product = await products.find(find)
-    .sort({ position: "desc" })
+    .sort(sort)
     .limit(paginet.limit)
     .skip(paginet.skip)
   res.render("admin/page/products/index", {
@@ -129,11 +145,32 @@ module.exports.delete = async (req, res) => {
 }
 
 module.exports.create = async (req, res) => {
-  res.render("admin/page/products/create")
+  const category = await Category.find({
+    deleted : false
+  })
+  const createTree = (arr, parentId = "") => {
+    const tree = [];
+    arr.forEach((item) => {
+      if (item.parent_id === parentId) {
+        const newItem = item;
+        const children = createTree(arr, item.id);
+        if (children.length > 0) {
+          newItem.children = children;
+        }
+        tree.push(newItem);
+      }
+    });
+    return tree;
+  };
+  const newcategory = createTree(category)
+  console.log(newcategory)
+  res.render("admin/page/products/create",{
+    data : newcategory
+  })
 }
 
 module.exports.createpost = async (req, res) => {
-  console.log(req.body)
+  req.body.shopid = req.cookies.token
   req.body.price = parseInt(req.body.price);
   req.body.discountPercentage = parseInt(req.body.discountPercentage);
   req.body.stock = parseInt(req.body.stock);
@@ -143,12 +180,66 @@ module.exports.createpost = async (req, res) => {
   } else {
     req.body.position = parseInt(req.body.position);
   }
-  if(req.file && req.file.filename){
-    req.body.thumbnail = `/upload/${req.file.filename}`
-  }
+  // if(req.file && req.file.filename){
+  //   req.body.thumbnail = `/upload/${req.file.filename}`
+  // }
   console.log(req.body)
   console.log(req.file)
   const product = new products(req.body)
   await product.save();
+  req.flash('nice', 'Cập Nhật Trạng Thái Thành Công !')
   res.redirect(`/${system.prefixAdmin}/products`)
+}
+
+module.exports.edit = async (req, res) => {
+ try {
+  const id = req.params.id
+  const data = await products.findOne({
+    _id: id,
+    deleted: false
+  })
+  const category = await Category.find({
+    deleted : false
+  })
+  const createTree = (arr, parentId = "") => {
+    const tree = [];
+    arr.forEach((item) => {
+      if (item.parent_id === parentId) {
+        const newItem = item;
+        const children = createTree(arr, item.id);
+        if (children.length > 0) {
+          newItem.children = children;
+        }
+        tree.push(newItem);
+      }
+    });
+    return tree;
+  };
+  const newcategory = createTree(category)
+  console.log(newcategory)
+  console.log(data.categoryid)
+  res.render("admin/page/products/edit", {
+    data: data,
+    category : newcategory
+  })
+ } catch (error) {
+  res.redirect("back")
+ }
+}
+
+module.exports.editpost = async (req, res) => {
+  const id = req.body.id
+  req.body.price = parseInt(req.body.price);
+  req.body.discountPercentage = parseInt(req.body.discountPercentage);
+  req.body.stock = parseInt(req.body.stock);
+  req.body.position = parseInt(req.body.position);
+  console.log(id)
+  console.log(req.body)  
+  const result = await products.updateOne({
+    _id: id,
+    deleted: false
+  }, req.body)
+  console.log(result)
+  req.flash('nice', 'Cập Nhật Trạng Thái Thành Công !')
+  res.redirect("/admin/products")
 }

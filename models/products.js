@@ -10,6 +10,11 @@ const productSchema = new mongoose.Schema({
     slug : "title",
     unique : true
   },
+  categoryid:{
+    type : String,
+    default : ""
+  },
+  shopid : String,
   description: String,
   price: Number,
   discountPercentage: Number,
@@ -21,7 +26,8 @@ const productSchema = new mongoose.Schema({
     type : Boolean,
     default : false
   },
-  deletedAt : Date
+  deletedAt : Date,
+  featured: String
 },{
   timestamps : true
 });

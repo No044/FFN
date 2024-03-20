@@ -1,6 +1,1283 @@
 extends ../../layout/layout.pug
 
 block main 
-  h1 trang chủ
-  h2 trang hihi
-  
+  body.home-style5
+    // Start loader
+    .loader-wrap
+      svg(
+        preserveAspectRatio="none" 
+        viewBox="0 0 1000 1000"
+        )
+        path#svg(d="M0,1005S175,995,500,995s500,5,500,5V0H0Z")
+      .loader-wrap-heading
+        .load-text
+          span L
+          span o
+          span a
+          span d
+          span i
+          span n
+          span g
+    // End loader
+    // Start navbar containerphicss
+   
+    // Start header
+    header.tc-header-style5
+      .containerphicss
+        .row.gx-2
+          .col-lg-9
+            .header-slider5
+              .swiper-wrapper
+                .swiper-slide
+                  .slider-card.bg-img.p-50.radius-4.overflow-hidden(data-background="assets/img/slider_bg.png")
+                    .row.align-items-center
+                      .col-lg-6
+                        .info
+                          h2.fsz-50.text-white.fw-500.lh-1
+                            span.color-orange1 eVolve
+                            br
+                            span.op-4 Quality foods
+                            br
+                            span For your pet
+                          a.butn.bg-orange1.text-white.radius-3.fw-600.fsz-14.text-uppercase.mt-40(href="../inner_pages/single_product.html")
+                            span discover now
+                      .col-lg-6
+                        .img.th-300
+                          img.img-contain(
+                            alt="" 
+                            src="images/slider_img1.png"
+                            )
+                .swiper-slide
+                  .slider-card.bg-img.p-50.radius-4.overflow-hidden(data-background="assets/img/slider_bg.png")
+                    .row.align-items-center
+                      .col-lg-6
+                        .info
+                          h2.fsz-50.text-white.fw-500.lh-1
+                            span.color-orange1 eVolve
+                            br
+                            span.op-4 Quality foods
+                            br
+                            span For your pet
+                          a.butn.bg-orange1.text-white.radius-3.fw-600.fsz-14.text-uppercase.mt-40(href="../inner_pages/single_product.html")
+                            span discover now
+                      .col-lg-6
+                        .img.th-300
+                          img.img-contain(
+                            alt="" 
+                            src="images/slider_img1.png"
+                            )
+              .slider-controls
+                .swiper-button-prev
+                .swiper-pagination
+                .swiper-button-next
+            .tc-brands-style5
+              .row.align-items-center
+                .col-lg-2.col-12.text-center.text-lg-start.mb-4.mb-lg-0
+                  h5.title.fsz-18.fw-400.lh-5
+                    b Humble
+                    br
+                    | Brand Sponsor
+                .col-lg-2.col-6
+                  a.img-brand(href="#")
+                    img(
+                      alt="" 
+                      src="images/brand1.png"
+                      )
+                .col-lg-2.col-6
+                  a.img-brand(href="#")
+                    img(
+                      alt="" 
+                      src="images/brand2.png"
+                      )
+                .col-lg-2.col-6
+                  a.img-brand(href="#")
+                    img(
+                      alt="" 
+                      src="images/brand3.png"
+                      )
+                .col-lg-2.col-6
+                  a.img-brand(href="#")
+                    img(
+                      alt="" 
+                      src="images/brand4.png"
+                      )
+                .col-lg-2.col-6
+                  a.img-brand(href="#")
+                    img(
+                      alt="" 
+                      src="images/brand5.png"
+                      )
+          .col-lg-3
+            .p-30.radius-3.border.mt-3.mt-lg-0(class="banner_1")
+              .row.align-items-center
+                .col-6
+                  .info
+                    small.fsz-10.color-666.text-uppercase.ltspc-2.mb-2 stosi
+                    h6.fsz-20.text-capitalize.fw-600
+                      | Packet Top
+                      br
+                      | Resistance
+                      br
+                      | Food..
+                    a.butn.md-butn.bg-orange1.text-white.radius-3.fw-600.fsz-12.text-uppercase.mt-30(href="../inner_pages/single_product.html")
+                      span Shop Now
+                .col-6
+                  .img.th-160
+                    img.img-contain(
+                      alt="" 
+                      src="images/banner1.png"
+                      )
+            .bg-img.mt-10(
+              data-background="assets/img/banner/banner2_bg.png" 
+              class="banner_img"
+              )
+              .bn-logo
+                img(
+                  alt="" 
+                  src="images/banner-logo.png"
+                  )
+              .inf.mt-50
+                .row.justify-content-end
+                  .col-6
+                    h5.fsz-24.fw-400.text-uppercase
+                      b dogge
+                      br
+                      | devisoi
+                      br
+                      | food
+                    .price.mt-40
+                      small.fsz-10.d-block.text-uppercase.color-666.mb-1 from
+                      h5.fsz-24.color-orange1.fw-700 $169
+    // Start header
+    // Contents
+    main
+      // Start categories
+      section.tc-categories-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
+        .containerphicss
+          .content.border.p-30.radius-4.overflow-hidden
+            .title.mb-30
+              .row.align-items-center
+                .col-lg-8
+                  h5.fsz-24.fw-bold.text-capitalize Pets Food Categories
+                .col-lg-4.mt-4.mt-lg-0.text-lg-end
+                  a.fw-600.text-uppercase.hover-orange1(href="#")
+                    | view all
+                    i.fal.fa-long-arrow-right.ms-1
+            .categories
+              a.cat-item(href="../inner_pages/products.html")
+                .img
+                  img(
+                    alt="" 
+                    src="images/cat1.png"
+                    )
+                span.fsz-13.fw-bold.text-uppercase.mt-20 cat
+              a.cat-item(href="../inner_pages/products.html")
+                .img
+                  img(
+                    alt="" 
+                    src="images/cat2.png"
+                    )
+                span.fsz-13.fw-bold.text-uppercase.mt-20 dog
+              a.cat-item(href="../inner_pages/products.html")
+                .img
+                  img(
+                    alt="" 
+                    src="images/cat3.png"
+                    )
+                span.fsz-13.fw-bold.text-uppercase.mt-20 parrot
+              a.cat-item(href="../inner_pages/products.html")
+                .img
+                  img(
+                    alt="" 
+                    src="images/cat4.png"
+                    )
+                span.fsz-13.fw-bold.text-uppercase.mt-20 Fish
+              a.cat-item(href="../inner_pages/products.html")
+                .img
+                  img(
+                    alt="" 
+                    src="images/cat5.png"
+                    )
+                span.fsz-13.fw-bold.text-uppercase.mt-20 horse
+              a.cat-item(href="../inner_pages/products.html")
+                .img
+                  img(
+                    alt="" 
+                    src="images/cat6.png"
+                    )
+                span.fsz-13.fw-bold.text-uppercase.mt-20 rabbit
+              a.cat-item(href="../inner_pages/products.html")
+                .img
+                  img(
+                    alt="" 
+                    src="images/cat7.png"
+                    )
+                span.fsz-13.fw-bold.text-uppercase.mt-20 hen
+              a.cat-item(href="../inner_pages/products.html")
+                .img
+                  img(
+                    alt="" 
+                    src="images/cat8.png"
+                    )
+                span.fsz-13.fw-bold.text-uppercase.mt-20 tortoise
+            .cat-foot.text-center.pt-30.position-relative.znd10
+              h3.fsz-24.fw-300 12k+ active users everyday
+      // End categories
+      // Start products-slider
+      section.tc-products-slider-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
+        .containerphicss
+          .content.border.p-30.radius-4
+            .title.mb-30
+              .row.align-items-center
+                .col-lg-8
+                  h5.fsz-24.fw-bold.text-capitalize Hand-Picked Foods
+                .col-lg-4.mt-4.mt-lg-0.text-lg-end
+                  a.fw-600.text-uppercase.hover-orange1(href="../inner_pages/products.html")
+                    | view all
+                    i.fal.fa-long-arrow-right.ms-1
+            .products-slider.overflow-hidden
+              .swiper-wrapper
+                //- .swiper-slide
+                  .product-card-style5
+                    .top-inf
+                      a.fav-btn(href="#0")
+                        i.fas.fa-heart
+                    a.img(href="../inner_pages/single_product.html")
+                      img.img-contain.main-image(
+                        alt="" 
+                        src="images/prod1.png"
+                        )
+                    .info
+                      .rating
+                        .stars
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star.color-999
+                        span.num.fsz-11 (5)
+                      h6
+                        a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Royal Canin Cat Dry Food Exigent 2kg
+                      .price.mt-15
+                        h5.fsz-18.fw-600 $359.00
+                      .meta
+                        a.meta-item.color-green2.border(href="#") free shipping
+                        a.meta-item.color-red1.border(href="#") free gift
+                      p.fsz-12.mt-2
+                        i.fas.fa-check-circle.color-green1.me-1
+                        | In stock
+                      a.butn.bg-brown1.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#")
+                        span Add To Cart
+                .swiper-slide
+                  .product-card-style5
+                    .top-inf
+                      .dis-card
+                        small.fsz-10.d-block.text-uppercase save
+                        h6.fsz-14 $100.00
+                      a.fav-btn.active(href="#0")
+                        i.fas.fa-heart
+                    a.img(href="../inner_pages/single_product.html")
+                      img.img-contain.main-image(
+                        alt="" 
+                        src="images/prod2.png"
+                        )
+                    .info
+                      .rating
+                        .stars
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                        span.num.fsz-11 (152)
+                      h6
+                        a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Brit Premium by Nature Cat Can â€“ Chicken (200g)
+                      .price.mt-15
+                        h5.fsz-18.color-orange1.fw-600
+                          | $579.00
+                          span.old.fsz-14.color-666.text-decoration-line-through $619.00
+                      .meta
+                        a.meta-item.color-green2.border(href="#") free shipping
+                      p.fsz-12.mt-2
+                        i.fas.fa-check-circle.color-green1.me-1
+                        | In stock
+                      a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                        span Add To Cart
+                .swiper-slide
+                  .product-card-style5
+                    .top-inf
+                      a.fav-btn(href="#0")
+                        i.fas.fa-heart
+                    a.img(href="../inner_pages/single_product.html")
+                      img.img-contain.main-image(
+                        alt="" 
+                        src="images/prod3.png"
+                        )
+                    .info
+                      .rating
+                        .stars
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star-half
+                        span.num.fsz-11 (8)
+                      h6
+                        a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Spectrum Starter32 Kitten Food â€“ Chicken Formula (400g)
+                      .price.mt-15
+                        h5.fsz-18.color-orange1.fw-600
+                          | $1,729.00
+                          span.old.fsz-14.color-666.text-decoration-line-through $2,119.00
+                      .meta
+                        a.meta-item.color-green1.border(href="#") free shipping
+                      p.fsz-12.mt-2
+                        i.fas.fa-times-circle.color-red1.me-1
+                        | Out of stock
+                      a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                        span Add To Cart
+                .swiper-slide
+                  .product-card-style5
+                    .top-inf
+                      a.fav-btn(href="#0")
+                        i.fas.fa-heart
+                    a.img(href="../inner_pages/single_product.html")
+                      img.img-contain.main-image(
+                        alt="" 
+                        src="images/prod4.png"
+                        )
+                    .info
+                      h6
+                        a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Himalaya Erina EP Tick and Flea Control Shampoo 200 ml
+                      .price.mt-15
+                        h5.fsz-18.fw-600 $979.00 - $1,259.00
+                      .meta
+                        a.meta-item.border(href="#") $2.98 Shipping
+                      p.fsz-12.mt-2 PRE - ORDER
+                      a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                        span Add To Cart
+                .swiper-slide
+                  .product-card-style5
+                    .top-inf
+                      .dis-card
+                        small.fsz-10.d-block.text-uppercase save
+                        h6.fsz-14 $3.00
+                      a.fav-btn(href="#0")
+                        i.fas.fa-heart
+                    a.img(href="../inner_pages/single_product.html")
+                      img.img-contain.main-image(
+                        alt="" 
+                        src="images/prod5.png"
+                        )
+                    .info
+                      .rating
+                        .stars
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                        span.num.fsz-11 (9)
+                      h6
+                        a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Bonnie Beef Cocktail (500g)
+                      .price.mt-15
+                        h5.fsz-18.color-orange1.fw-600
+                          | $9.00
+                          span.old.fsz-14.color-666.text-decoration-line-through $12.00
+                      .meta
+                        a.meta-item.border(href="#") $3.98 Shipping
+                      p.fsz-12.mt-2.text-uppercase
+                        i.fas.fa-phone-alt
+                        | contact
+                      a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                        span Add To Cart
+                .swiper-slide
+                  .product-card-style5
+                    .top-inf
+                      a.fav-btn(href="#0")
+                        i.fas.fa-heart
+                    a.img(href="../inner_pages/single_product.html")
+                      img.img-contain.main-image(
+                        alt="" 
+                        src="images/prod3.png"
+                        )
+                    .info
+                      .rating
+                        .stars
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star
+                          i.fa.fa-star-half
+                        span.num.fsz-11 (8)
+                      h6
+                        a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Spectrum Starter32 Kitten Food â€“ Chicken Formula (400g)
+                      .price.mt-15
+                        h5.fsz-18.color-orange1.fw-600
+                          | $1,729.00
+                          span.old.fsz-14.color-666.text-decoration-line-through $2,119.00
+                      .meta
+                        a.meta-item.color-green1.border(href="#") free shipping
+                      p.fsz-12.mt-2
+                        i.fas.fa-times-circle.color-red1.me-1
+                        | Out of stock
+                      a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                        span Add To Cart
+            .swiper-button-next
+            .swiper-button-prev
+      // End products-slider
+      // Start features-line
+      .tc-features-line-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
+        .containerphicss
+          .content.py-4.px-5.lh-7.bg-orange1.text-white.radius-4.text-uppercase.d-block.d-lg-flex.justify-content-between.fsz-13.lh-5
+            a(href="#")
+              span.icon.me-2
+                i.fal.fa-shipping-fast
+              | free shipping over $199
+            a(href="#")
+              span.icon.me-2
+                i.fal.fa-redo-alt
+              | 30 days money back
+            a(href="#")
+              span.icon.me-2
+                i.fal.fa-shield
+              | 100% secure payment
+            a(href="#")
+              span.icon.me-2
+                i.fal.fa-rabbit
+              | free product return
+            a(href="#")
+              span.icon.me-2
+                i.fal.fa-headphones
+              | 24/7 online & offline support
+      // End features-line
+      // Start sale
+      section.tc-sale-style5.mt-30.wow.fadeInUp.slow.mb-150(data-wow-delay="0.2s")
+        .containerphicss
+          .content.border.radius-4
+            .row.gx-0
+              .col-lg-3
+                .sale-filter
+                  h5.fsz-24.mb-15
+                    i.fas.fa-bolt.me-1.color-orange1
+                    | Flash Sale
+                  ul
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | 40% offer
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | christmas offer
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | hand picked
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | Best sell
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | recently added
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                  .img
+                    img(
+                      alt="" 
+                      src="images/sale_dog.png"
+                      )
+              .col-lg-9
+                .products.p-30
+                  .row.gx-0
+                   each item of data                  
+                      .col-lg-3
+                        .product-card-style5.mt-4.mt-lg-0
+                          .top-inf
+                            .dis-card
+                              small.fsz-10.d-block.text-uppercase save
+                              h6.fsz-14 #{item.discountPercentage} %
+                            a.fav-btn.active(href="#0")
+                              i.fas.fa-heart
+                          a.img(href="../inner_pages/single_product.html")
+                            img.img-contain.main-image(
+                              alt="" 
+                              src=item.thumbnail
+                              )
+                          .info
+                            .rating
+                              .stars
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                                i.fa.fa-star
+                              span.num.fsz-11 (152)
+                            h6
+                              a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") #{item.title}
+                            .price.mt-15
+                              h5.fsz-18.color-orange1.fw-600
+                                | #{item.priceNew}  
+                                span.old.fsz-14.color-666.text-decoration-line-through  #{item.price} VNĐ
+                            .meta
+                              a.meta-item.color-green2.border(href="#") free shipping
+                            p.fsz-12.mt-2
+                              i.fas.fa-check-circle.color-green1.me-1
+                              | In stock
+                            a( class="butn bg-000 text-white radius-4 fw-500 fsz-12 text-uppercase text-center mt-2 hover-bg-orange1 addCart" href=`` idshop=item.shopid addcart=item.id)
+                              span Add To Cart 
+                            form(formaddcart method="post" action="")
+      // End sale
+      // Start sale
+      section.tc-sale-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
+        .containerphicss
+          .content.border.radius-4
+            .row.gx-0
+              .col-lg-3
+                .sale-filter.bg-orange1
+                  h5.fsz-24.mb-15
+                    i.fas.fa-fire.me-1.text-white
+                    | Hot Sale
+                  ul
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | 40% offer
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | christmas offer
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | hand picked
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | Best sell
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                    li
+                      a.s-link(href="../inner_pages/products.html")
+                        | recently added
+                        span.arrow
+                          i.fal.fa-long-arrow-right
+                  .img
+                    img.cat-img(
+                      alt="" 
+                      src="images/sale_cat.png"
+                      )
+              .col-lg-9
+                .products.p-30
+                  .row.gx-0
+                    .col-lg-3
+                      .product-card-style5
+                        .top-inf
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                        a.img(href="../inner_pages/single_product.html")
+                          img.img-contain.main-image(
+                            alt="" 
+                            src="images/prod10.png"
+                            )
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          h6
+                            a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Royal Canin Cat Dry Food Exigent 2kg
+                          .price.mt-15
+                            h5.fsz-18.fw-600 $359.00
+                          .meta
+                            a.meta-item.color-green2.border(href="#") free shipping
+                            a.meta-item.color-red1.border(href="#") free gift
+                          p.fsz-12.mt-2
+                            i.fas.fa-check-circle.color-green1.me-1
+                            | In stock
+                          a.butn.bg-brown1.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#")
+                            span Add To Cart
+                    .col-lg-3
+                      .product-card-style5.mt-4.mt-lg-0
+                        .top-inf
+                          .dis-card
+                            small.fsz-10.d-block.text-uppercase save
+                            h6.fsz-14 $100.00
+                          a.fav-btn.active(href="#0")
+                            i.fas.fa-heart
+                        a.img(href="../inner_pages/single_product.html")
+                          img.img-contain.main-image(
+                            alt="" 
+                            src="images/prod11.png"
+                            )
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                            span.num.fsz-11 (152)
+                          h6
+                            a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Brit Premium by Nature Cat Can â€“ Chicken (200g)
+                          .price.mt-15
+                            h5.fsz-18.color-orange1.fw-600
+                              | $579.00
+                              span.old.fsz-14.color-666.text-decoration-line-through $619.00
+                          .meta
+                            a.meta-item.color-green2.border(href="#") free shipping
+                          p.fsz-12.mt-2
+                            i.fas.fa-check-circle.color-green1.me-1
+                            | In stock
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                    .col-lg-3
+                      .product-card-style5.mt-4.mt-lg-0
+                        .top-inf
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                        a.img(href="../inner_pages/single_product.html")
+                          img.img-contain.main-image(
+                            alt="" 
+                            src="images/prod12.png"
+                            )
+                        .info
+                          h6
+                            a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Himalaya Erina EP Tick and Flea Control Shampoo 200 ml
+                          .price.mt-15
+                            h5.fsz-18.color-orange1.fw-600
+                              | $1,729.00
+                              span.old.fsz-14.color-666.text-decoration-line-through $2,119.00
+                          .meta
+                            a.meta-item.color-green2.border(href="#") free shipping
+                          p.fsz-12.mt-2
+                            i.fas.fa-times-circle.color-red1.me-1
+                            | In stock
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                    .col-lg-3
+                      .product-card-style5.mt-4.mt-lg-0
+                        .top-inf
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                        a.img(href="../inner_pages/single_product.html")
+                          img.img-contain.main-image(
+                            alt="" 
+                            src="images/prod13.png"
+                            )
+                        .info
+                          h6
+                            a.prod-title.fsz-14.mt-2.hover-underline(href="../inner_pages/single_product.html") Himalaya Erina EP Tick and Flea Control Shampoo 200 ml
+                          .price.mt-15
+                            h5.fsz-18.fw-600 $979.00 - $1,259.00
+                          .meta
+                            a.meta-item.border(href="#") $2.98 Shipping
+                          p.fsz-12.mt-2 PRE - ORDER
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+          .row.gx-0
+            .col-lg-9.offset-lg-3
+              .recent-style5
+                h6.title.fsz-20.fw-bold.mb-4.mb-lg-0 Recently Viewed
+                .prods
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod1.png"
+                      )
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod2.png"
+                      )
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod3.png"
+                      )
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod4.png"
+                      )
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod5.png"
+                      )
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod6.png"
+                      )
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod7.png"
+                      )
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod8.png"
+                      )
+                  a(href="#")
+                    img(
+                      alt="" 
+                      src="images/prod9.png"
+                      )
+      // End sale
+      // Start banner
+      section.tc-banner-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
+        .containerphicss
+          .content.bg-light2.py-lg-2.px-5.radius-3
+            .row.align-items-center.gx-5
+              .col-lg-2
+                .logo-img.mt-4.mt-lg-0
+                  img(
+                    alt="" 
+                    src="images/banner_logo.png"
+                    )
+              .col-lg-4.order-last.order-lg-0
+                .img
+                  img(
+                    alt="" 
+                    src="images/banner_img.png"
+                    )
+              .col-lg-4
+                .info.my-4.my-lg-0
+                  small.fsz-13.color-666.d-block Pay with 4 installment, 0% interest
+                  h4.fsz-30.fw-bold
+                    | Buy Now,
+                    span.fw-300 Pay Later
+              .col-lg-2
+                a.butn.md-butn.bg-white.radius-3.fw-600.fsz-12.text-uppercase.hover-bg-orange1(href="#")
+                  span.color-brown1 Discover Now
+      // End banner
+      // Start tabs
+      section.tc-tabs-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
+        .containerphicss
+          .content.border.radius-4.p-30.overflow-hidden
+            .title.mb-30.d-block.d-lg-flex.justify-content-between.align-items-center
+              h5.fsz-24.fw-bold.flex-shrink-0 Best Selling Food
+              ul#pills-tab.nav.nav-pills.mt-4.mt-lg-0(role="tablist")
+                li.nav-item(role="presentation")
+                  button#pills-cat1-tab.nav-link.ms-lg-2.active(
+                    data-bs-target="#pills-cat1" 
+                    data-bs-toggle="pill"
+                    ) Featured
+                li.nav-item(role="presentation")
+                  button#pills-cat2-tab.nav-link.ms-lg-2(
+                    data-bs-target="#pills-cat2" 
+                    data-bs-toggle="pill"
+                    ) Pregnancy & Postpartum
+                li.nav-item(role="presentation")
+                  button#pills-cat3-tab.nav-link.ms-lg-2(
+                    data-bs-target="#pills-cat1" 
+                    data-bs-toggle="pill"
+                    ) Milks & Foods
+                li.nav-item(role="presentation")
+                  button#pills-cat4-tab.nav-link.ms-lg-2(
+                    data-bs-target="#pills-cat2" 
+                    data-bs-toggle="pill"
+                    ) Diapers & Wipes
+                li.nav-item(role="presentation")
+                  button#pills-cat5-tab.nav-link.ms-lg-2(
+                    data-bs-target="#pills-cat1" 
+                    data-bs-toggle="pill"
+                    ) Infant
+                li.nav-item(role="presentation")
+                  button#pills-cat6-tab.nav-link.ms-lg-2(
+                    data-bs-target="#pills-cat2" 
+                    data-bs-toggle="pill"
+                    ) Strollers
+            #pills-tabContent.tab-content
+              #pills-cat1.tab-pane.fade.show.active
+                .tabs-product-slider5
+                  .swiper-wrapper
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod14.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod15.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod16.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod17.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod18.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+              #pills-cat2.tab-pane.fade
+                .tabs-product-slider5
+                  .swiper-wrapper
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod16.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod17.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod18.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod14.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+                    .swiper-slide
+                      .product-card
+                        .tags
+                          a(href="#") New
+                        .img
+                          img.img-contain(
+                            alt="" 
+                            src="images/prod15.png"
+                            )
+                          a.butn.bg-000.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-2.hover-bg-orange1.addCart(href="#0")
+                            span Add To Cart
+                        .info
+                          .rating
+                            .stars
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star
+                              i.fa.fa-star.color-999
+                            span.num.fsz-11 (5)
+                          a.title.fsz-14.mb-20(href="../inner_pages/single_product.html") Toddler Travel Light Stroller
+                          h6.price.fsz-18.mb-15 $39.00
+                        .btm-fav
+                          span 50 Purchases
+                          a.fav-btn(href="#0")
+                            i.fas.fa-heart
+      // End tabs
+      // Start blog
+      section.tc-blog-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
+        .containerphicss
+          .content.border.radius-4.p-30.overflow-hidden
+            .title.mb-30
+              .row.align-items-center
+                .col-lg-8
+                  h5.fsz-24.fw-bold.text-capitalize our blog
+                .col-lg-4.mt-4.mt-lg-0.text-lg-end
+                  a.fw-600.text-uppercase.hover-orange1(href="#")
+                    | view all
+                    i.fal.fa-long-arrow-right.ms-1
+            .blogs
+              .row
+                .col-lg-4
+                  .overlay-card
+                    .img
+                      img.img-cover(
+                        alt="" 
+                        src="images/blog1.jpg"
+                        )
+                    .info
+                      h6.title.fsz-18.fw-bold
+                        a(href="#") Babies in Winter: How to protect your newborn in cold weather
+                      small.fsz-12.mt-2 45 Minutes ago in Experience
+                .col-lg-4
+                  .sub-card.pb-3.border-bottom.mb-3.mt-4.mt-lg-0
+                    .row.gx-4
+                      .col-5
+                        .img
+                          img.img-cover(
+                            alt="" 
+                            src="images/blog2.jpg"
+                            )
+                      .col-7
+                        .info
+                          h6.title.fsz-18.fw-bold
+                            a(href="#") Omicron in Kids: Hereâ€™s what parents should know
+                          small.fsz-12.float-date 45 Minutes ago in Pet, Food
+                  .sub-card.mb-4.mb-lg-0
+                    .row.gx-4
+                      .col-5
+                        .img
+                          img.img-cover(
+                            alt="" 
+                            src="images/blog3.jpg"
+                            )
+                      .col-7
+                        .info
+                          h6.title.fsz-18.fw-bold
+                            a(href="#") Fun facts about January Babies
+                          small.fsz-12.float-date 10 days ago in Pet, Food
+                .col-lg-4
+                  .overlay-card
+                    .img
+                      img.img-cover(
+                        alt="" 
+                        src="images/blog4.jpg"
+                        )
+                    .info
+                      h6.title.fsz-18.fw-bold
+                        a(href="#") Babies in Winter: How to protect your newborn in cold weather
+                      small.fsz-12.mt-2 45 Minutes ago in Experience
+      // End blog
+    // End-Contents
+    // Start footer
+    footer.tc-footer-style5.mt-30.bg-light2
+      .containerphicss
+        .top-content
+          .row.justify-content-between
+            .col-lg-4
+              .subs-foot
+                .text.fsz-16.mb-40
+                  | Be the first to get the latest news about trends,
+                  br
+                  | promotions and much more!
+                form.form-sub.d-block
+                  .form-group
+                    span.icon.ms-20
+                      i.fal.fa-envelope
+                    input(
+                      placeholder="Enter your email address" 
+                      type="text"
+                      )
+                    a.butn.fsz-18.shadow-none(href="#")
+                      span
+                        i.fal.fa-long-arrow-right
+                  small.fsz-13.color-666
+                    | By subscribing, you accept the
+                    a.color-000.text-decoration-underline.mt-4(href="#") Privacy Policy
+                .social-links.mt-50
+                  a.me-3.hover-orange1(href="#")
+                    i.fab.fa-twitter
+                  a.me-3.hover-orange1(href="#")
+                    i.fab.fa-facebook-f
+                  a.me-3.hover-orange1(href="#")
+                    i.fab.fa-instagram
+                  a.me-3.hover-orange1(href="#")
+                    i.fab.fa-youtube
+            .col-lg-3
+              .foot-contact.ps-lg-5.mt-5.mt-lg-0
+                h6.sub-title.mb-30.fw-bold Get In Touch
+                ul.lh-7
+                  li
+                    a.hover-underline.lh-5(href="#")
+                      | 175 Elizaberth Ave Str, San Jose,
+                      br
+                      | CA, 90025
+                  li
+                    a.hover-underline(href="#") +0082 561 43 34
+                  li
+                    a.hover-underline(href="#") contact@Swoopets.com
+            .col-lg-2
+              .foot-contact
+                ul.lh-7
+                  li
+                    a.hover-underline(href="#") FAQs
+                  li
+                    a.hover-underline(href="#") Payment
+                  li
+                    a.hover-underline(href="#") Shipping
+                  li
+                    a.hover-underline(href="#") Guest purchase
+                  li
+                    a.hover-underline(href="#") Returns
+                  li
+                    a.hover-underline(href="#") Terms & Conditions
+                  li
+                    a.hover-underline(href="#") Gift Card
+            .col-lg-2
+              .foot-contact
+                ul.lh-7
+                  li
+                    a.hover-underline(href="#") About Store
+                  li
+                    a.hover-underline(href="#") Contact
+                  li
+                    a.hover-underline(href="#") Careers
+                  li
+                    a.hover-underline(href="#") Editorial
+        .pay-content
+          .row.align-items-center
+            .col-lg-5
+              .pay-side
+                span.flex-nowrap.me-3 Accept for
+                .logos
+                  img(
+                    alt="" 
+                    src="images/pay1.png"
+                    )
+                  img(
+                    alt="" 
+                    src="images/pay2.png"
+                    )
+                  img(
+                    alt="" 
+                    src="images/pay3.png"
+                    )
+                  img(
+                    alt="" 
+                    src="images/pay4.png"
+                    )
+                  img(
+                    alt="" 
+                    src="images/pay5.png"
+                    )
+            .col-lg-2
+              .foot-logo.text-lg-center.my-4.my-lg-0
+                img(
+                  alt="" 
+                  src="images/logo_foot.png"
+                  )
+            .col-lg-5
+              .foot-lang.text-lg-end
+                span.icon
+                  i.fal.fa-globe
+                span.color-999 Language:
+                a(href="#") English
+        .foot
+          p.color-666
+            | Â© 2024
+            a.color-000(href="#") Swoo
+            | . All Rights Reserved.
+      .mob-navigation.d-flex.d-lg-none
+        ul
+          li.list
+            a(href="#0")
+              span.icon
+                i.fal.fa-sync
+              span.text Compare
+          li.list
+            a(href="#0")
+              span.icon
+                i.fal.fa-heart
+              span.text Favorite
+          li.list.active
+            a(href="#0")
+              span.icon
+                i.fal.fa-home
+              span.text Home
+          li.list
+            a(href="#0")
+              span.icon
+                i.fal.fa-shopping-bag
+              span.text Cart
+          li.list
+            a(href="#0")
+              span.icon
+                i.fal.fa-user
+              span.text Profile
+          li.indicator
+    // End footer

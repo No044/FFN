@@ -150,9 +150,6 @@ if (formchangemulti) {
 const buttondelete = document.querySelectorAll("[button-delete]")
 if (buttondelete) {
     const formdelete = document.querySelector("[form-delete]")
-    if(formdelete){
-        const path = formdelete.getAttribute("data-path")
-    }
     buttondelete.forEach((item) => {
         item.addEventListener('click', () => {
             Swal.fire({
@@ -170,8 +167,10 @@ if (buttondelete) {
                         text: "Your file has been deleted.",
                         icon: "success"
                     });
+                    const path = formdelete.getAttribute("data-path")                    
                     const dataid = item.getAttribute("data")
                     const action = `${path}/${dataid}?_method=DELETE`
+                    console.log(action)
                     formdelete.action = action
                     formdelete.submit()
                 }
@@ -194,4 +193,96 @@ if(showalert)
  buttonclose.addEventListener('click',() => {
     showalert.classList.add("alert-hidden")
  })
+}
+
+
+// tính năng sắp xếp
+
+const selectsort = document.querySelector('[sort-select]')
+if(selectsort){
+    let url = new URL(window.location.href)
+    selectsort.addEventListener('change',(e) => {
+        const [key,value] = selectsort.value.split("-")
+        console.log(key,value)
+        url.searchParams.set("sortkey",key)
+        url.searchParams.set("sortvalue",value)
+        window.location.href = url.href
+    })
+}
+
+
+const button = document.querySelector("[sort-clear]")
+console.log(button)
+if(button){
+    let url = new URL(window.location.href)
+    button.addEventListener('click',() => {
+        url.searchParams.delete("sortkey")
+        url.searchParams.delete("sortvalue")
+        window.location.href = url.href;
+    })
+}
+
+
+
+let url = new URL(window.location.href)
+const sortkey = url.searchParams.get("sortkey")
+const sortvalue = url.searchParams.get("sortvalue")
+
+if(sortkey && sortvalue){
+    const string = `${sortkey}-${sortvalue}`
+    const selectsort = document.querySelector('[sort-select]')
+    const opption = selectsort.querySelector(`option[value="${string}"]`)
+    console.log(string)
+    opption.selected = true
+}
+
+// tính năng phân quyền
+const premisson = document.querySelector("[table-permissions]")
+console.log(premisson)
+if(premisson)
+{
+    const buttonupdate = document.querySelector("[button-submit]")
+    buttonupdate.addEventListener("click",() => {
+        const role = []
+        const row = premisson.querySelectorAll("[data-name]")
+        row.forEach((row) => {
+            const name = row.getAttribute("data-name")
+            const input = row.querySelectorAll("input")
+            if(name == "id"){
+               input.forEach((input) => {
+                role.push({
+                    id : input.value,
+                    premisson : []
+     
+                  })
+               })
+            }
+            else{
+                input.forEach((item,index) => {
+                    if(item.checked){
+                     role[index].premisson.push(name)
+                    }
+                })
+
+            }
+        })
+        const form = document.querySelector("[form-change-permissions]")
+        const input = form.querySelector("input")
+        input.value = JSON.stringify(role)
+        form.submit()
+    })
+}
+
+const datarecord = document.querySelector("[data-records]")
+if(datarecord){
+   const data = JSON.parse(datarecord.getAttribute("data-records"))
+   data.forEach((item,index) => {
+    item.permissions.forEach((itemchildren) => {
+        const tr = premisson.querySelector(`[data-name="${itemchildren}"]`)
+        const ip = tr.querySelectorAll("input")
+        console.log(ip)
+        console.log(ip[index])
+        ip[index].checked = true
+    })
+   })
 }

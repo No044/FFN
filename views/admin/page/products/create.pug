@@ -1,6 +1,12 @@
 extends ../../layout/index.pug
-
+include ../../mixi/mixi.pug
 block main
+  - if (messages.error)
+    div(
+      class="alert alert-danger"
+      show-alert
+      data-time=5000
+    ) #{messages.error} <span close-alert>x</span>
   h1(class="mb-4") Thêm mới sản phẩm
 
   form(
@@ -18,6 +24,31 @@ block main
         name="title"
         required
       )
+    div(class="form-group")
+      label(for="categoryid") Danh Muc 
+      select(name="categoryid" id="categoryid" class="form-control")
+        option(value="") Vui Lòng chọn danh mục
+        if(data)
+          +select-tree(data)  
+    div(class="form-group form-check form-check-inline")
+      input(
+        type="radio"
+        class="form-check-input"
+        id="featured1"
+        name="featured"
+        value="1"
+      )
+      label(for="featured1" class="form-check-label") Nổi bật
+    div(class="form-group form-check form-check-inline")
+      input(
+        type="radio"
+        class="form-check-input"
+        id="featured0"
+        name="featured"
+        value="0"
+        checked
+      )
+      label(for="featured0" class="form-check-label") Không
     div(class="form-group")
       label(for="desc") Mô tả
       textarea(

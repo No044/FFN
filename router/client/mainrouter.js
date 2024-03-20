@@ -1,20 +1,12 @@
-// module.exports = (app) => {
-//     app.("/", (req,res)=> {
-//         res.render("client/page/home/index");
-//      });
-     
-//      app.get("/products", (req,res)=> {
-//          res.render("client/page/products/index");
-//      })
-// }
 
 const homerouter = require("./homerouter")
 const productsrouter = require("./productsrouter")
+const cart = require("./cart")
 module.exports = (app) => {
-    app.get("/", (req, res) => {
-        res.render("client/page/home/index");
-    });
+    app.use("/",homerouter);
      
-   app.use("/products",productsrouter)
+    app.use("/products",productsrouter)
+
+    app.use("/cart",cart)
 
 }

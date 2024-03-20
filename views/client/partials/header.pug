@@ -1,16 +1,513 @@
-header.header 
- .container 
-  .row.align-items-center 
-   .col-3 
-    .inner-logo 
-     a(href="/")
-      img(src)
-
-   .col-9 
-    .inner-menu 
-     ul 
-      li 
-       a(href="/") Trang Chủ
-      li 
-       a(href="/products") sản phẩm 
-       
+.navbar-containerphicss
+      // Start offer navbar
+      .offer-nav-style5
+        .containerphicss
+          .row.align-items-center.gx-0
+            .col-lg-3
+              h4.fsz-30.fw-600 New Spring offer
+            .col-lg-2
+              .timing
+                .item
+                  small Day
+                  p#days
+                .item
+                  small Hou
+                  p#hours
+                .item
+                  small Min
+                  p#minutes
+                .item
+                  small Sec
+                  p#seconds
+            .col-lg-2.offset-lg-5.text-lg-end
+              a.butn.md-butn.bg-brown1.text-white.radius-3.fw-600.fsz-12.text-uppercase(href="#")
+                span Shop Now
+        span.cls
+          i.fal.fa-times
+      // End offer navbar
+      // Start top-navbar
+      .tc-top-navbar-style5
+        .containerphicss
+          .content
+            .row.gx-0
+              .col-6
+                .links
+                  a(href="#")
+                    i.fal.fa-shopping-basket.me-1
+                    span.txt Sell on Swoo
+                  a(href="#")
+                    i.fal.fa-shopping-cart.me-1
+                    span.txt Order Tracking
+                  a(href="#")
+                    i.fal.fa-eye.me-1
+                    span.txt Recently Viewed
+              .col-6
+                .lang-links
+                  ul.links-ul
+                    li.dropdown
+                      a.dropdown-toggle(
+                        aria-expanded="false" 
+                        data-bs-toggle="dropdown" 
+                        role="button" 
+                        href="#"
+                        )
+                        i.fal.fa-dollar-sign.me-1
+                        | USD
+                      ul.dropdown-menu
+                        li
+                          a.dropdown-item(href="#") USD
+                        li
+                          a.dropdown-item(href="#") USD
+                    li.dropdown
+                      a.dropdown-toggle(
+                        aria-expanded="false" 
+                        data-bs-toggle="dropdown" 
+                        role="button" 
+                        href="#"
+                        )
+                        img.me-2.icon-15(
+                          alt="" 
+                          src="images/eng.png"
+                          )
+                        | Eng
+                      ul.dropdown-menu
+                        li
+                          a.dropdown-item(href="#") Arabic
+      // End top-navbar
+      // Start navbar
+      nav.tc-navbar-style5.navbar-light
+        .containerphicss
+          .content
+            .row.align-items-center
+              .col-lg-2
+                a.brand(href="#")
+                  img.logo(
+                    alt="" 
+                    src="images/logo.png"
+                    )
+                a.btn-mob-menu.d-lg-none(
+                  data-bs-toggle="offcanvas" 
+                  href="#offcanvasExample"
+                  )
+                  i.fal.fa-bars
+              .col-lg-4.pe-lg-5
+                .search-cat
+                  .input-group
+                    input.form-control(
+                      placeholder="Search anything..." 
+                      type="text"
+                      )
+                    a.search-btn.color-orange1(href="#")
+                      i.fal.fa-search
+              .col-lg-6
+                .nav-side.d-none.d-lg-flex
+                  .hot-line
+                    span.icon
+                      i.fal.fa-tty
+                    .inf
+                      small.fsz-12.d-block.mb-1 Hotline 24/7
+                      h6.fsz-20.fw-bold
+                        a(href="tel:(025)36862516") (025) 3686 25 16
+                  .icons
+                    a(href="#")
+                      i.fal.fa-sync
+                    a(href="#")
+                      i.fal.fa-heart
+                      span.dot
+                    a(href="../inner_pages/profile.html")
+                      i.fal.fa-user
+                    a(href="../inner_pages/cart.html")
+                      i.fal.fa-shopping-bag
+                      span.num 2
+      // End navbar
+      // Start links-navbar
+      .tc-links-navbar-style5.d-none.d-lg-block
+        .containerphicss
+          .content
+            .row.align-items-center
+              .col-lg-2
+                //
+                  <div class="category-box">
+                   <a href="#" class="category-link"> categories <i class="fal fa-angle-down ms-2"></i> </a>
+                   </div>
+                .category-box
+                  a.category-link(href="#")
+                    | categories
+                    i.fal.fa-angle-down.ms-2
+                  ul.list-card
+                    li
+                      a(href="../inner_pages/products.html")
+                        | cats
+                        span.arrow
+                          i.fal.fa-chevron-right.ms-4
+                    li
+                      a(href="../inner_pages/products.html")
+                        | dogs
+                        span.arrow
+                          i.fal.fa-chevron-right.ms-4
+                    li
+                      a(href="../inner_pages/products.html")
+                        | parrot
+                        span.arrow
+                          i.fal.fa-chevron-right.ms-4
+                    li
+                      a(href="../inner_pages/products.html")
+                        | Fish
+                        span.arrow
+                          i.fal.fa-chevron-right.ms-4
+                    li
+                      a(href="../inner_pages/products.html")
+                        | horse
+                        span.arrow
+                          i.fal.fa-chevron-right.ms-4
+                    li
+                      a(href="../inner_pages/products.html")
+                        | Rabbit
+                        span.arrow
+                          i.fal.fa-chevron-right.ms-4
+                    li
+                      a(href="../inner_pages/products.html")
+                        | hen
+                        span.arrow
+                          i.fal.fa-chevron-right.ms-4
+                    li
+                      a(href="../inner_pages/products.html")
+                        | tortoise
+                        span.arrow
+                          i.fal.fa-chevron-right.ms-4
+              .col-lg-8
+                .links
+                  ul.ul-list
+                    li.dropdown
+                      a#navbarDropdown1.dropdown-toggle.link-item(
+                        aria-expanded="false" 
+                        data-bs-toggle="dropdown" 
+                        role="button" 
+                        href="#"
+                        ) Homes
+                      ul.dropdown-menu(aria-labelledby="navbarDropdown1")
+                        li
+                          a.dropdown-item(href="../home_baby/index.html") Home Baby
+                        li
+                          a.dropdown-item(href="../home_electronic/index.html") Home Electronic
+                        li
+                          a.dropdown-item(href="../home_lighting/index.html") Home Lighting
+                        li
+                          a.dropdown-item(href="../home_pets/index.html") Home Pets
+                        li
+                          a.dropdown-item(href="../home_tech/index.html") Home Tech
+                    li.dropdown
+                      a#navbarDropdown2.dropdown-toggle.link-item(
+                        aria-expanded="false" 
+                        data-bs-toggle="dropdown" 
+                        role="button" 
+                        href="#"
+                        ) Pages
+                      ul.dropdown-menu(aria-labelledby="navbarDropdown2")
+                        li
+                          a.dropdown-item(href="../inner_pages/about.html") About
+                        li
+                          a.dropdown-item(href="../inner_pages/contact.html") Contact
+                        li
+                          a.dropdown-item(href="../inner_pages/login.html") Login
+                        li
+                          a.dropdown-item(href="../inner_pages/profile.html") Profile
+                        li
+                          a.dropdown-item(href="../inner_pages/register.html") Register
+                    li.dropdown
+                      a#navbarDropdown3.dropdown-toggle.link-item(
+                        aria-expanded="false" 
+                        data-bs-toggle="dropdown" 
+                        role="button" 
+                        href="#"
+                        ) Products
+                      ul.dropdown-menu(aria-labelledby="navbarDropdown3")
+                        li
+                          a.dropdown-item(href="../inner_pages/products.html") products
+                        li
+                          a.dropdown-item(href="../inner_pages/products_layout_2.html") products layout 2
+                        li
+                          a.dropdown-item(href="../inner_pages/cart.html") Cart
+                        li
+                          a.dropdown-item(href="../inner_pages/checkout.html") Checkout
+                        li
+                          a.dropdown-item(href="../inner_pages/single_product.html") Single Product
+                        li
+                          a.dropdown-item(href="../inner_pages/single_product_pay.html") Single Product Pay
+                    li
+                      a.link-item(href="../inner_pages/contact.html") Contact
+              .col-lg-2.text-lg-end
+                a.side-btn(
+                  data-bs-toggle="offcanvas" 
+                  href="#offcanvasExample"
+                  )
+                  i.fal.fa-grip-lines
+      // End links-navbar
+      // Start mob-navbar
+      #offcanvasExample.mob-navbar-style5.offcanvas.offcanvas-start(tabindex="-1")
+        .icons
+          a(href="#")
+            i.fal.fa-sync
+          a(href="#")
+            i.fal.fa-heart
+            span.dot
+          a(href="#")
+            i.fal.fa-user
+          a(href="#")
+            i.fal.fa-shopping-bag
+            span.num 2
+        .ntop
+          a.logo(href="#")
+            img(
+              alt="" 
+              src="images/logo.png"
+              )
+          // <span class="cls-menu fs-4"> <i class="fal fa-times"></i> </span>
+          button.btn-close.text-reset(
+            aria-label="Close" 
+            data-bs-dismiss="offcanvas" 
+            type="button"
+            )
+        .hot-line
+          span.icon
+            i.fal.fa-tty
+          .inf
+            small.fsz-12.d-block.mb-1 Hotline 24/7
+            h6.fsz-20.fw-bold
+              a(href="tel:(025)36862516") (025) 3686 25 16
+        .nbody
+          .links-group
+            #accordionExample.accordion
+              .accordion-item
+                #headingOne.accordion-header
+                  button.accordion-button(
+                    aria-controls="collapseOne" 
+                    aria-expanded="true" 
+                    data-bs-target="#collapseOne" 
+                    data-bs-toggle="collapse" 
+                    type="button"
+                    )
+                    strong.links-title categories
+                #collapseOne.accordion-collapse.collapse.show(
+                  data-bs-parent="#accordionExample" 
+                  aria-labelledby="headingOne"
+                  )
+                  .accordion-body.p-0
+                    ul.links
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat1.png"
+                              )
+                            | cat
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat2.png"
+                              )
+                            | dog
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat3.png"
+                              )
+                            | parrot
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat4.png"
+                              )
+                            | Fish
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat5.png"
+                              )
+                            | horse
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat6.png"
+                              )
+                            | Rabbit
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat7.png"
+                              )
+                            | hen
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat8.png"
+                              )
+                            | tortoise
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+              .accordion-item
+                #headingTwo.accordion-header
+                  button.accordion-button.collapsed(
+                    aria-controls="collapseTwo" 
+                    aria-expanded="false" 
+                    data-bs-target="#collapseTwo" 
+                    data-bs-toggle="collapse" 
+                    type="button"
+                    )
+                    strong.links-title Shop
+                #collapseTwo.accordion-collapse.collapse(
+                  data-bs-parent="#accordionExample" 
+                  aria-labelledby="headingTwo"
+                  )
+                  .accordion-body.p-0
+                    ul.links
+                      li
+                        a(href="#")
+                          span products list
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span products grid
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span single product 1
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span single product 2
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span cart
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+              .accordion-item
+                #headingThree.accordion-header
+                  button.accordion-button.collapsed(
+                    aria-controls="collapseThree" 
+                    aria-expanded="false" 
+                    data-bs-target="#collapseThree" 
+                    data-bs-toggle="collapse" 
+                    type="button"
+                    )
+                    strong.links-title Pages
+                #collapseThree.accordion-collapse.collapse(
+                  data-bs-parent="#accordionExample" 
+                  aria-labelledby="headingThree"
+                  )
+                  .accordion-body.p-0
+                    ul.links
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat1.png"
+                              )
+                            | cat
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat2.png"
+                              )
+                            | dog
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat3.png"
+                              )
+                            | parrot
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat4.png"
+                              )
+                            | Fish
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat5.png"
+                              )
+                            | horse
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat6.png"
+                              )
+                            | Rabbit
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat7.png"
+                              )
+                            | hen
+                          span.arrow
+                            i.fal.fa-long-arrow-right
+                      li
+                        a(href="#")
+                          span
+                            img.cicon(
+                              alt="" 
+                              src="images/cat8.png"
+                              )
+                            | tortoise
+                          span.arrow
+                            i.fal.fa-long-arrow-right
