@@ -1,3 +1,4 @@
+include ../../mixi/mixi.pug
 doctype html
 head
   meta(charset='utf-8')
@@ -24,6 +25,9 @@ head
     |  browser. Please 
     a(href='http://browsehappy.com/') upgrade your browser
     |  to improve your experience.
+    
++alert(messages.nice)
++alertfaild(messages.error)
 #preloader.preloader
   .inner
     .line1
@@ -33,7 +37,7 @@ section.fxt-template-animation.fxt-template-layout34(data-bg-image='/img/element
   .fxt-shape
     .fxt-transformX-L-50.fxt-transition-delay-1
       img(src='/regisimages/shape1.png' alt='Shape')
-  .containerphicss 
+  .container 
     .row
       .col-lg-8
         .fxt-column-wrap.justify-content-between

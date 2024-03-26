@@ -59,32 +59,7 @@ html {
   height: 100%;
 }
 
-.containerphicss 
-{
-  width: 1600px;
-  margin: 0 auto;
-}
 
-.fxt-animated-img img{
-  width: 800px;
-}
-.fxt-form{
-  height: 600px !important;
-  margin-top: 100px !important;
-}
-.POST{
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-}
-.form-group{
-  margin-bottom: 50px !important;
-
-}
-.form-group input{
-  width: 550px !important;
-  height: 100px;
-}
 body {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;

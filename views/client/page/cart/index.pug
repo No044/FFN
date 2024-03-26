@@ -1,0 +1,529 @@
+doctype html
+head
+  // Metas
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+  meta(name='keywords' content='HTML5 Template swoo Multi-Purpose themeforest')
+  meta(name='description' content='swoo - Multi-Purpose HTML5 Template')
+  meta(name='author' content='')
+  // Title
+  title Swoo
+  // Favicon
+  link(rel='shortcut icon' href='../common/assets/img/fav2.png' title='Favicon' sizes='16x16')
+  // bootstrap 5
+  link(rel='stylesheet' href='/cartcss/bootstrap.min.css')
+  // font family
+  link(href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap' rel='stylesheet')
+  // fontawesome icons
+  link(rel='stylesheet' href='/cartcss/all.min.css')
+  // fontawesome icons
+  link(rel='stylesheet' href='/cartcss/line-awesome.css')
+  // animate css
+  link(rel='stylesheet' href='/cartcss/animate.css')
+  // fancybox popup
+  link(rel='stylesheet' href='/cartcss/jquery.fancybox.css')
+  // lity popup
+  link(rel='stylesheet' href='/cartcss/lity.css')
+  // swiper slider
+  link(rel='stylesheet' href='/cartcss/swiper8.min.css')
+  // common style
+  link(rel='stylesheet' href='/cartcss/common_style.css')
+  // home style
+  link(rel='stylesheet' href='/cartcss/inner_pages.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous' referrerpolicy='no-referrer')
+
+.body-container
+  .container.container-llgg
+    // Start navbar container
+    .tc-navbar-container-style3
+      .wh-box.p-15.radius-4.bg-white.mt-20
+        // Start top-navbar
+        .top-navbar-style3
+          .container
+            .row
+              .col-lg-6
+                .hot-line
+                  small
+                    i.las.la-tty
+                    |  Hotline 24/7
+                  a.fw-bold(href='tel:(025)38862516')  (025) 3886 25 16 
+              .col-lg-6.mt-4.mt-lg-0
+                .top-nav-side.justify-content-lg-end
+                  .side-links
+                    a.me-lg-3(href='#')  Sell on Swoo 
+                    a.me-lg-4(href='#')  Order Tracki 
+                  ul.links-ul
+                    li.dropdown
+                      a#navbarDropdown.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        i.la.la-dollar-sign.me-1
+                        |  USD
+                      ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                        li
+                          a.dropdown-item(href='#') USD
+                        li
+                          a.dropdown-item(href='#') USD
+                    li.dropdown
+                      a#navbarDropdown1.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        img.me-1.icon-15(src='images/eng.png' alt='')
+                        |  Eng
+                      ul.dropdown-menu(aria-labelledby='navbarDropdown1')
+                        li
+                          a.dropdown-item(href='#') Arabic
+        // End top-navbar
+        // Start navbar
+        nav.navbar.navbar-expand-lg.navbar-light.tc-navbar-style3
+          .container
+            a.navbar-brand(href='#')
+              img.logo(src='images/logo.png' alt='')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse.ms-lg-5
+              ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.dropdown
+                  a#navbarDropdown1.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Homes
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown1')
+                    li
+                      a.dropdown-item(href='../home_baby/index.html') Home Baby
+                    li
+                      a.dropdown-item(href='../home_electronic/index.html') Home Electronic
+                    li
+                      a.dropdown-item(href='../home_lighting/index.html') Home Lighting
+                    li
+                      a.dropdown-item(href='../home_pets/index.html') Home Pets
+                    li
+                      a.dropdown-item(href='../home_tech/index.html') Home Tech
+                li.dropdown
+                  a#navbarDropdown2.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Pages
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown2')
+                    li
+                      a.dropdown-item(href='../inner_pages/about.html') About
+                    li
+                      a.dropdown-item(href='../inner_pages/contact.html') Contact
+                    li
+                      a.dropdown-item(href='../inner_pages/login.html') Login
+                    li
+                      a.dropdown-item(href='../inner_pages/profile.html') Profile
+                    li
+                      a.dropdown-item(href='../inner_pages/register.html') Register
+                li.dropdown
+                  a#navbarDropdown3.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Products
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown3')
+                    li
+                      a.dropdown-item(href='../inner_pages/products.html') products
+                    li
+                      a.dropdown-item(href='../inner_pages/products_layout_2.html') products layout 2
+                    li
+                      a.dropdown-item(href='../inner_pages/cart.html') Cart
+                    li
+                      a.dropdown-item(href='../inner_pages/checkout.html') Checkout
+                    li
+                      a.dropdown-item(href='../inner_pages/single_product.html') Single Product
+                    li
+                      a.dropdown-item(href='../inner_pages/single_product_pay.html') Single Product Pay
+                li.nav-item
+                  a.nav-link(href='../inner_pages/contact.html') Contact
+                li.nav-item.d-block.d-lg-none
+                  a.nav-link(href='../inner_pages/login.html') login
+                li.nav-item.d-block.d-lg-none
+                  a.nav-link(href='../inner_pages/register.html') Register
+            .side-nav.d-none.d-lg-flex
+              .icons
+                a.icon-link(href='#')
+                  i.las.la-sync-alt
+                a.icon-link(href='#')
+                  i.lar.la-heart
+                a.icon-link(href='#')
+                  i.las.la-user
+              .text-item.ms-3
+                small.fsz-11.color-666.text-uppercase.d-block  welcome 
+                a.fsz-14.text-uppercase.fw-bold(href='../inner_pages/login.html')  log in / Register 
+              .icons.ms-4
+                a.icon-link(href='../inner_pages/cart.html')
+                  i.las.la-shopping-bag
+                  span.num 5
+              .text-item.msW-3
+                small.fsz-11.color-666.text-uppercase.d-block  cart 
+                a.fsz-14.text-uppercase.fw-bold(href='../inner_pages/cart.html')  $1,689.00 
+        // End navbar
+      // Start search nav
+      .search-nav-style3
+        .container
+          .row.align-items-center.gx-0
+            .col-lg-5
+              .search-cat
+                .input-group.flex-nowrap
+                  select.form-select(name='name')
+                    option(value='')  All Categories 
+                    option(value='')  Categories 1 
+                    option(value='')  Categories 2 
+                  input.form-control(type='text' placeholder='Search anything...')
+                  a.search-btn(href='#')
+                    i.fal.fa-search
+            .col-lg-7.d-none.d-lg-block
+              .delivery-features.ps-lg-5
+                .row
+                  .col-lg-4
+                    a.feat-link(href='#')
+                      i.la.la-shipping-fast.fs-6.me-2
+                      span  free shipping over $199 
+                  .col-lg-4
+                    a.feat-link(href='#')
+                      i.las.la-redo-alt.fs-6.me-2
+                      span  30 days money back 
+                  .col-lg-4
+                    a.feat-link(href='#')
+                      i.las.la-shield-alt.fs-6.me-2
+                      span  100% secure payment 
+      // End search nav
+    // End navbar container
+    // Contents
+    main
+      // Start breadcrumb
+      section.tc-breadcrumb-style6.p-30.radius-4.bg-white.mt-3.wow.fadeInUp
+        nav(aria-label='breadcrumb')
+          ol.breadcrumb.fw-bold.mb-0
+            li.breadcrumb-item.color-999
+              a(href='#') Home
+            li.breadcrumb-item.color-999
+              a(href='#') pages
+            li.breadcrumb-item.active.color-000(aria-current='page') cart
+      // End breadcrumb
+      // Start cart
+      section.tc-cart.p-5.radius-4.bg-white.mt-3.mb-3
+        .row
+          .col-lg-8
+            form(action="" formchangeinput)
+            .products(qualityincart)
+              each item in data
+                .product-card(datacart)
+                  .top-inf
+                    .dis-card
+                      small.fsz-10.d-block.text-uppercase  save 
+                      h6.fsz-14  #{item.discountPercentage} %
+                    a.fav-btn(href='#0')
+                      i.las.la-heart
+                    a.remove-btn(href='#0' buttondeletecart=item.id)
+                      i.fa-solid.fa-trash-can
+                  a.img(href='#0')
+                    img.img-contain.main-image(src=item.thumbnail alt='')
+                  .info
+                    .rating
+                      .stars
+                        i.la.la-star
+                        i.la.la-star
+                        i.la.la-star
+                        i.la.la-star
+                        i.la.la-star
+                      span.num  (152) 
+                    h6
+                      a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='#')  #{item.title}
+                    .price.mt-15
+                      h5.fsz-18.color-red1.fw-600 #{item.priceNew}
+                    .add-more.mt-3
+                      span.qt-minus
+                        i.fas.fa-minus.btn-down
+                      input.qt.border-0(type='text' value=item.quality inputcart idsanpham=item.idsanpham)
+                      span.qt-plus
+                        i.fas.fa-plus.btn-up
+                    .meta
+                      a.meta-item.color-green2(href='#')
+                        | free shipping 
+                        span.bg.bg-green2
+                    p.fsz-12.mt-2
+                      i.fas.fa-check-circle.color-green2.me-1
+                      |  In stock
+            //-   .product-card
+            //-     .top-inf
+            //-       small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+            //-       a.fav-btn(href='#0')
+            //-         i.las.la-heart
+            //-       a.remove-btn(href='#0')
+            //-         i.las.la-trash
+            //-     a.img(href='#0')
+            //-       img.img-contain.main-image(src='images/prod27.png' alt='')
+            //-     .info
+            //-       h6
+            //-         a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='#')  aPod Pro Tablet 2023  LTE + Wifi, GPS Cellular 12.9 Inch, 512GB 
+            //-       .price.mt-15
+            //-         h5.fsz-18.fw-600  $979.00 
+            //-       .add-more.mt-3
+            //-         span.qt-minus
+            //-           i.fas.fa-minus
+            //-         input.qt.border-0(type='text' value='1')
+            //-         span.qt-plus
+            //-           i.fas.fa-plus
+            //-       .meta
+            //-         a.meta-item.color-222(href='#')
+            //-           | $2.98 Shipping 
+            //-           span.bg.bg-222
+            //-       p.fsz-12.mt-2
+            //-         i.fas.fa-check-circle.color-green2.me-1
+            //-         |  In stock
+            //-   .product-card
+                .top-inf
+                  small.fsz-10.py-1.px-2.radius-2.bg-222.text-white.text-uppercase  new 
+                  a.fav-btn(href='#0')
+                    i.las.la-heart
+                  a.remove-btn(href='#0')
+                    i.las.la-trash
+                a.img(href='#0')
+                  img.img-contain.main-image(src='images/prod65.png' alt='')
+                .info
+                  .rating
+                    .stars
+                      i.la.la-star
+                      i.la.la-star
+                      i.la.la-star
+                      i.la.la-star
+                      i.la.la-star.color-999
+                    span.num  (5) 
+                  h6
+                    a.prod-title.fsz-14.fw-bold.mt-2.hover-green2(href='#')  Samsung Galaxy X6 Ultra LTE 4G/128 Gb, Black  Smartphone  
+                  .price.mt-15
+                    h5.fsz-18.fw-600  $659.00 
+                  .add-more.mt-3
+                    span.qt-minus
+                      i.fas.fa-minus
+                    input.qt.border-0(type='text' value='1')
+                    span.qt-plus
+                      i.fas.fa-plus
+                  .meta
+                    a.meta-item.color-green2(href='#')
+                      | free shipping 
+                      span.bg.bg-green2
+                    a.meta-item.color-red1(href='#')
+                      | free gift 
+                      span.bg.bg-red1
+                  p.fsz-12.mt-2
+                    i.fas.fa-check-circle.color-green2.me-1
+                    |  In stock
+          .col-lg-4
+            .cart-card
+              strong.fsz-16.d-block.mb-20  Order Summary 
+              .card-item
+                span  Sub Total: 
+                strong.color-000  #{total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' VNĐ'}
+              .card-item
+                span  Shpping estimate: 
+                strong.color-000  15.000 VNĐ 
+              .card-item
+                span  Tax estimate: 
+                strong.color-000  6.000 VNĐ
+              .card-item.border-0
+                strong.color-000.text-uppercase  Order total: 
+                strong.color-000  #{(total + 15000 + 6000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' VNĐ'}
+              .btns.pt-3
+                .row.justify-content-center
+                  .col-lg-6
+                    a.butn.bg-green2.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-3.mt-lg-0.py-3.px-3.w-100(href='#')
+                      span  checkout 
+      // End cart
+    // End-Contents
+// Start footer
+//- footer.tc-footer-style3
+  .container
+    .footer-content
+      .row
+        .col-lg-4
+          .foot-info
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  Swoo - 1st NYC tech online market 
+            p.text-uppercase  hotline 24/7 
+            h4.fsz-30.fw-bold.color-green2.mb-30  (025) 3686 25 16 
+            p.fsz-14.color-000
+              | 257 Thatcher Road St, Brooklyn, Manhattan, 
+              br
+              |  NY 10092
+            a.fsz-14.color-000(href='#')  contact@Swootechmart.com 
+            .foot-social.mt-40
+              a(href='#')
+                i.fab.fa-twitter
+              a(href='#')
+                i.fab.fa-facebook-f
+              a(href='#')
+                i.fab.fa-instagram
+              a(href='#')
+                i.fab.fa-youtube
+              a(href='#')
+                i.fab.fa-pinterest
+        .col-lg-2
+          .links
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  top Categories 
+            ul.links-list
+              li
+                a(href='#')  Laptops 
+              li
+                a(href='#')  PC &amp; Computers 
+              li
+                a(href='#')  Cell Phones 
+              li
+                a(href='#')  Tablets 
+              li
+                a(href='#')  Gaming &amp; VR 
+              li
+                a(href='#')  networks 
+              li
+                a(href='#')  Cameras 
+              li
+                a(href='#')  Sounds 
+              li
+                a(href='#')  Office 
+        .col-lg-2
+          .links
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  company 
+            ul.links-list
+              li
+                a(href='#')  About Swoo 
+              li
+                a(href='#')  Contact 
+              li
+                a(href='#')  Career 
+              li
+                a(href='#')  Blog 
+              li
+                a(href='#')  Sitemap 
+              li
+                a(href='#')  Store Locations 
+        .col-lg-2
+          .links
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  help center 
+            ul.links-list
+              li
+                a(href='#')  Customer Service 
+              li
+                a(href='#')  Policy 
+              li
+                a(href='#')  Terms &amp; Conditions 
+              li
+                a(href='#')  Trach Order 
+              li
+                a(href='#')  FAQs 
+              li
+                a(href='#')  My Account 
+              li
+                a(href='#')  Product Support 
+        .col-lg-2
+          .links
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  partner 
+            ul.links-list
+              li
+                a(href='#')  Become Seller 
+              li
+                a(href='#')  Affiliate 
+              li
+                a(href='#')  Advertise 
+              li
+                a(href='#')  Partnership 
+      .footer-btm-info.mt-60
+        .row
+          .col-lg-4
+            .dropdowns
+              ul.links-ul
+                li.dropdown
+                  a#navbarDropdown.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    i.la.la-dollar-sign.me-1
+                    |  USD
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                    li
+                      a.dropdown-item(href='#') USD
+                    li
+                      a.dropdown-item(href='#') USD
+                li.dropdown
+                  a#navbarDropdown1.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    img.me-1.icon-15(src='images/eng.png' alt='')
+                    |  Eng
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown1' style='')
+                    li
+                      a.dropdown-item(href='#') Arabic
+          .col-lg-8
+            .subscribe-content
+              h6.fsz-18.fw-bold.mb-30.text-uppercase
+                | subscribe &amp; get 
+                span.color-red1  10% off 
+                |  for your first order
+              .form-group
+                span.icon
+                  i.la.la-envelope
+                input(type='text' placeholder='Enter your email address')
+                button
+                  | subscribe 
+                  i.la.la-long-arrow-right.ms-2.fsz-18
+              p.fsz-13.fst-italic.color-666.mt-2
+                | By subscribing, you&rsquo;re accepted the our 
+                a.color-000.text-decoration-underline(href='#')  Policy 
+    .foot
+      .row.align-items-center
+        .col-lg-4.text-center.text-lg-start
+          p.color-666
+            | &copy; 2024 
+            strong.color-000  Swoo 
+            | . All Rights Reserved
+        .col-lg-4
+          .pay-imgs.text-center.my-3.my-lg-0
+            img(src='images/pay1.png' alt='')
+            img(src='images/pay2.png' alt='')
+            img(src='images/pay3.png' alt='')
+            img(src='images/pay4.png' alt='')
+            img(src='images/pay5.png' alt='')
+        .col-lg-4.text-center.text-lg-end
+          a.text-primary(href='#')
+            i.la.la-mobile.me-1.fsz-16
+            |  Mobile Site
+  .mob-navigation.d-flex.d-lg-none
+    ul
+      li.list
+        a(href='#0')
+          span.icon
+            i.las.la-sync-alt
+          span.text Compare
+      li.list
+        a(href='#0')
+          span.icon
+            i.lar.la-heart
+          span.text Favorite
+      li.list.active
+        a(href='#0')
+          span.icon
+            i.las.la-home
+          span.text Home
+      li.list
+        a(href='#0')
+          span.icon
+            i.las.la-shopping-bag
+          span.text Cart
+      li.list
+        a(href='#0')
+          span.icon
+            i.las.la-user
+          span.text Profile
+      li.indicator
+// End footer
+// Start to top button
+//
+  <a href="#" class="to_top">
+  <i class="la la-angle-up"></i>
+  </a>
+// End to top button
+// request
+script(src='js/jquery-3.0.0.min.js')
+script(src='js/jquery-migrate-3.0.0.min.js')
+script(src='js/bootstrap.bundle.min.js')
+script(src='js/wow.min.js')
+script(src='js/jquery.fancybox.js')
+script(src='js/lity.js')
+script(src='js/swiper8-bundle.min.js')
+script(src='js/jquery.waypoints.min.js')
+script(src='js/jquery.counterup.js')
+script(src='js/parallaxie.js')
+script(src='js/common_js.js')
+// ===== home scripts =====
+// <script src="../home_tech/assets/js/home_3_scripts.js"></script>
+// ===== innerpages scripts =====
+script(src='js/inner_pages.js')
+script(src='/jsclient/jslayout.js')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+

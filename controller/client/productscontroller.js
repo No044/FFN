@@ -6,9 +6,8 @@ module.exports.index = async (req,res) => {
         deleted: false
       });    
       for (const item of dataproduct) {
-        item.priceNew = item.price * (1 - item.discountPercentage/100);
-        item.priceNew = item.priceNew.toFixed(0);
-        item.phitest = "hihi";
+        item.priceNew = ((item.price / 100) * (100-item.discountPercentage)).toFixed(0);
+        item.priceNew = item.priceNew.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' VNĐ';  
       }    
       console.log(dataproduct)
       
@@ -16,6 +15,16 @@ module.exports.index = async (req,res) => {
         products : dataproduct
     });
 }
-module.exports.detail = (req,res) => {
-    res.send("Trang chi tiết sản phẩm");
+module.exports.detail = async (req,res) => {
+  const {slug} = req.params
+  const data = await products.findOne({
+    slug : slug
+  })
+    data.priceNew = ((data.price / 100) * (100-data.discountPercentage)).toFixed(0);
+    data.priceNew = data.priceNew.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' VNĐ';  
+    
+  console.log(data)
+  res.render("client/page/products/detail",{
+    data : data
+})
 }

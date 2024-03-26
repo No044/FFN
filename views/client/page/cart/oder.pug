@@ -1,0 +1,503 @@
+doctype html
+head
+  // Metas
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+  meta(name='keywords' content='HTML5 Template swoo Multi-Purpose themeforest')
+  meta(name='description' content='swoo - Multi-Purpose HTML5 Template')
+  meta(name='author' content='')
+  // Title
+  title Swoo
+  // Favicon
+  link(rel='shortcut icon' href='../common/assets/img/fav2.png' title='Favicon' sizes='16x16')
+  // bootstrap 5
+  link(rel='stylesheet' href='/csspay/bootstrap.min.css')
+  // font family
+  link(href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap' rel='stylesheet')
+  // fontawesome icons
+  link(rel='stylesheet' href='/csspay/all.min.css')
+  // fontawesome icons
+  link(rel='stylesheet' href='/csspay/line-awesome.css')
+  // animate css
+  link(rel='stylesheet' href='/csspay/animate.css')
+  // fancybox popup
+  link(rel='stylesheet' href='/csspay/jquery.fancybox.css')
+  // lity popup
+  link(rel='stylesheet' href='/csspay/lity.css')
+  // swiper slider
+  link(rel='stylesheet' href='/csspay/swiper8.min.css')
+  // izi toast
+  link(rel='stylesheet' href='/csspay/iziToast.min.css')
+  // common style
+  link(rel='stylesheet' href='/csspay/common_style.css')
+  // home style
+  link(rel='stylesheet' href='/csspay/inner_pages.css')
+// Start loader
+//- .loader-wrap
+  svg(viewbox='0 0 1000 1000' preserveaspectratio='none')
+    path#svg(d='M0,1005S175,995,500,995s500,5,500,5V0H0Z')
+  .loader-wrap-heading
+    .load-text
+      span L
+      span o
+      span a
+      span d
+      span i
+      span n
+      span g
+// End loader
+.body-container
+  .container.container-llgg
+    // Start navbar container
+    .tc-navbar-container-style3
+      .wh-box.p-15.radius-4.bg-white.mt-20
+        // Start top-navbar
+        .top-navbar-style3
+          .container
+            .row
+              .col-lg-6
+                .hot-line
+                  small
+                    i.las.la-tty
+                    |  Hotline 24/7
+                  a.fw-bold(href='tel:(025)38862516')  (025) 3886 25 16 
+              .col-lg-6.mt-4.mt-lg-0
+                .top-nav-side.justify-content-lg-end
+                  .side-links
+                    a.me-lg-3(href='#')  Sell on Swoo 
+                    a.me-lg-4(href='#')  Order Tracki 
+                  ul.links-ul
+                    li.dropdown
+                      a#navbarDropdown.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        i.la.la-dollar-sign.me-1
+                        |  USD
+                      ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                        li
+                          a.dropdown-item(href='#') USD
+                        li
+                          a.dropdown-item(href='#') USD
+                    li.dropdown
+                      a#navbarDropdown1.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                        img.me-1.icon-15(src='images/eng.png' alt='')
+                        |  Eng
+                      ul.dropdown-menu(aria-labelledby='navbarDropdown1')
+                        li
+                          a.dropdown-item(href='#') Arabic
+        // End top-navbar
+        // Start navbar
+        nav.navbar.navbar-expand-lg.navbar-light.tc-navbar-style3
+          .container
+            a.navbar-brand(href='#')
+              img.logo(src='images/logo.png' alt='')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse.ms-lg-5
+              ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.dropdown
+                  a#navbarDropdown1.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Homes
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown1')
+                    li
+                      a.dropdown-item(href='../home_baby/index.html') Home Baby
+                    li
+                      a.dropdown-item(href='../home_electronic/index.html') Home Electronic
+                    li
+                      a.dropdown-item(href='../home_lighting/index.html') Home Lighting
+                    li
+                      a.dropdown-item(href='../home_pets/index.html') Home Pets
+                    li
+                      a.dropdown-item(href='../home_tech/index.html') Home Tech
+                li.dropdown
+                  a#navbarDropdown2.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Pages
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown2')
+                    li
+                      a.dropdown-item(href='../inner_pages/about.html') About
+                    li
+                      a.dropdown-item(href='../inner_pages/contact.html') Contact
+                    li
+                      a.dropdown-item(href='../inner_pages/login.html') Login
+                    li
+                      a.dropdown-item(href='../inner_pages/profile.html') Profile
+                    li
+                      a.dropdown-item(href='../inner_pages/register.html') Register
+                li.dropdown
+                  a#navbarDropdown3.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Products
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown3')
+                    li
+                      a.dropdown-item(href='../inner_pages/products.html') products
+                    li
+                      a.dropdown-item(href='../inner_pages/products_layout_2.html') products layout 2
+                    li
+                      a.dropdown-item(href='../inner_pages/cart.html') Cart
+                    li
+                      a.dropdown-item(href='../inner_pages/checkout.html') Checkout
+                    li
+                      a.dropdown-item(href='../inner_pages/single_product.html') Single Product
+                    li
+                      a.dropdown-item(href='../inner_pages/single_product_pay.html') Single Product Pay
+                li.nav-item
+                  a.nav-link(href='../inner_pages/contact.html') Contact
+                li.nav-item.d-block.d-lg-none
+                  a.nav-link(href='../inner_pages/login.html') login
+                li.nav-item.d-block.d-lg-none
+                  a.nav-link(href='../inner_pages/register.html') Register
+            .side-nav.d-none.d-lg-flex
+              .icons
+                a.icon-link(href='#')
+                  i.las.la-sync-alt
+                a.icon-link(href='#')
+                  i.lar.la-heart
+                a.icon-link(href='#')
+                  i.las.la-user
+              .text-item.ms-3
+                small.fsz-11.color-666.text-uppercase.d-block  welcome 
+                a.fsz-14.text-uppercase.fw-bold(href='../inner_pages/login.html')  log in / Register 
+              .icons.ms-4
+                a.icon-link(href='../inner_pages/cart.html')
+                  i.las.la-shopping-bag
+                  span.num 5
+              .text-item.ms-3
+                small.fsz-11.color-666.text-uppercase.d-block  cart 
+                a.fsz-14.text-uppercase.fw-bold(href='../inner_pages/cart.html')  $1,689.00 
+        // End navbar
+      // Start search nav
+      .search-nav-style3
+        .container
+          .row.align-items-center.gx-0
+            .col-lg-5
+              .search-cat
+                .input-group.flex-nowrap
+                  select.form-select(name='name')
+                    option(value='')  All Categories 
+                    option(value='')  Categories 1 
+                    option(value='')  Categories 2 
+                  input.form-control(type='text' placeholder='Search anything...')
+                  a.search-btn(href='#')
+                    i.fal.fa-search
+            .col-lg-7.d-none.d-lg-block
+              .delivery-features.ps-lg-5
+                .row
+                  .col-lg-4
+                    a.feat-link(href='#')
+                      i.la.la-shipping-fast.fs-6.me-2
+                      span  free shipping over $199 
+                  .col-lg-4
+                    a.feat-link(href='#')
+                      i.las.la-redo-alt.fs-6.me-2
+                      span  30 days money back 
+                  .col-lg-4
+                    a.feat-link(href='#')
+                      i.las.la-shield-alt.fs-6.me-2
+                      span  100% secure payment 
+      // End search nav
+    // End navbar container
+    // Contents
+    main
+      // Start breadcrumb
+      section.tc-breadcrumb-style6.p-30.radius-4.bg-white.mt-3.wow.fadeInUp
+        nav(aria-label='breadcrumb')
+          ol.breadcrumb.fw-bold.mb-0
+            li.breadcrumb-item.color-999
+              a(href='#') Home
+            li.breadcrumb-item.color-999
+              a(href='#') pages
+            li.breadcrumb-item.active.color-000(aria-current='page') checkout
+      // End breadcrumb
+      // Start checkout
+      section.tc-checkout.p-5.radius-4.bg-white.mt-3.mb-3
+        .checkout-form
+          h6.fsz-18.fw-bold.text-uppercase.mb-4  checkout 
+          .alerts.mb-30
+            .row
+              .col-lg-7
+                .alert.bg-light2.mb-3(role='alert')
+                  p
+                    span.icon
+                      i.la.la-user.me-2.fs-4
+                    |  Returning customer? 
+                    a.color-red1.text-decoration-underline(href='#')  Click here to log in 
+              .col-lg-5
+                .alert.bg-light2.mb-3(role='alert')
+                  p
+                    span.icon
+                      i.la.la-user.me-2.fs-4
+                    |  Have a coupon? 
+                    a.color-red1.text-decoration-underline(href='#')  Click here to enter your code 
+          form.form(action="/cart/oder/pay" method="post")
+            .row
+              .col-lg-7
+                  .form-content
+                    .row.gx-3
+                      .col-lg-12
+                        h6.fsz-16.fw-bold.mb-30  Billing Detail 
+                      .col-lg-12 
+                        .form-group.mb-4
+                          label(for='')
+                            | Full Name 
+                            span.color-red1  * 
+                          input.form-control(type='text' name="fullName" value=data.fullName)               
+                      .col-lg-12
+                        .form-group.mb-4
+                          label(for='')  Street Address 
+                          input.form-control.mb-2(type='text' name="city" placeholder='Tỉnh Thành')
+                          input.form-control(type='text' name="address" placeholder='Địa Chỉ ')
+                      .col-lg-12
+                        .form-group.mb-4
+                          label(for='')
+                            | Phone Number 
+                            span.color-red1  * 
+                          input.form-control(type='text' placeholder='' name="Phone" value=data.phone)
+                      .col-lg-12
+                        .form-group.mb-4
+                          label(for='')
+                            | Email Address 
+                            span.color-red1  * 
+                          input.form-control(type='text' placeholder='' name="email" value=data.email)                                         
+              .col-lg-5
+                .order
+                  h6.fsz-16.fw-bold.mb-30  Your Order 
+                  .order-card
+                    h6.card-title
+                      span  Product 
+                      span  sub total 
+                    .prod-cont
+                      .prod-card
+                        .img-side
+                          .img
+                            img(src='images/prod37.png' alt='')
+                          .inf
+                            p.fsz-14.fw-500.lh-3
+                              | Pinnaeple Macbook Pro 2022 
+                              br
+                              |  M1/ 512GB
+                            p.fsz-14.color-666  x 3 
+                      .worldwide.d-flex.justify-content-between.py-2
+                        span  Worldwide Standard Shipping Free 
+                        span.color-red1  + $9.50 
+                    .total.d-flex.justify-content-between.py-3.fsz-16.fw-bold
+                      span  Order Total 
+                      span.color-green2 #{total}
+                      input(type="hidden" name="total" value=total)
+                  .payment-card
+                    .form-check
+                      input#payment1.form-check-input(type='radio' name='payment' value="Payment upon delivery" checked=true)
+                      label.form-check-label(for='payment1')
+                        h6.fw-bold.mb-10.fsz-14 Payment upon delivery 
+                    .form-check
+                      input#payment2.form-check-input(type='radio' name='payment' value="VNPay")
+                      label.form-check-label(for='payment2')
+                        h6.fw-bold.mb-10.fsz-14  VN Pay
+                    a.w-100(href='#')
+                       button.butn.bg-green2.text-white.radius-4.fw-500.fsz-12.text-uppercase.text-center.mt-30.py-3.px-3.w-100(type="submit" style="border : 1px solid white") Place order 
+      // End checkout
+    // End-Contents
+// Start footer
+footer.tc-footer-style3
+  .container
+    .footer-content
+      .row
+        .col-lg-4
+          .foot-info
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  Swoo - 1st NYC tech online market 
+            p.text-uppercase  hotline 24/7 
+            h4.fsz-30.fw-bold.color-green2.mb-30  (025) 3686 25 16 
+            p.fsz-14.color-000
+              | 257 Thatcher Road St, Brooklyn, Manhattan, 
+              br
+              |  NY 10092
+            a.fsz-14.color-000(href='#')  contact@Swootechmart.com 
+            .foot-social.mt-40
+              a(href='#')
+                i.fab.fa-twitter
+              a(href='#')
+                i.fab.fa-facebook-f
+              a(href='#')
+                i.fab.fa-instagram
+              a(href='#')
+                i.fab.fa-youtube
+              a(href='#')
+                i.fab.fa-pinterest
+        .col-lg-2
+          .links
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  top Categories 
+            ul.links-list
+              li
+                a(href='#')  Laptops 
+              li
+                a(href='#')  PC &amp; Computers 
+              li
+                a(href='#')  Cell Phones 
+              li
+                a(href='#')  Tablets 
+              li
+                a(href='#')  Gaming &amp; VR 
+              li
+                a(href='#')  networks 
+              li
+                a(href='#')  Cameras 
+              li
+                a(href='#')  Sounds 
+              li
+                a(href='#')  Office 
+        .col-lg-2
+          .links
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  company 
+            ul.links-list
+              li
+                a(href='#')  About Swoo 
+              li
+                a(href='#')  Contact 
+              li
+                a(href='#')  Career 
+              li
+                a(href='#')  Blog 
+              li
+                a(href='#')  Sitemap 
+              li
+                a(href='#')  Store Locations 
+        .col-lg-2
+          .links
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  help center 
+            ul.links-list
+              li
+                a(href='#')  Customer Service 
+              li
+                a(href='#')  Policy 
+              li
+                a(href='#')  Terms &amp; Conditions 
+              li
+                a(href='#')  Trach Order 
+              li
+                a(href='#')  FAQs 
+              li
+                a(href='#')  My Account 
+              li
+                a(href='#')  Product Support 
+        .col-lg-2
+          .links
+            h6.fsz-18.fw-bold.mb-30.text-uppercase  partner 
+            ul.links-list
+              li
+                a(href='#')  Become Seller 
+              li
+                a(href='#')  Affiliate 
+              li
+                a(href='#')  Advertise 
+              li
+                a(href='#')  Partnership 
+      .footer-btm-info.mt-60
+        .row
+          .col-lg-4
+            .dropdowns
+              ul.links-ul
+                li.dropdown
+                  a#navbarDropdown.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    i.la.la-dollar-sign.me-1
+                    |  USD
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                    li
+                      a.dropdown-item(href='#') USD
+                    li
+                      a.dropdown-item(href='#') USD
+                li.dropdown
+                  a#navbarDropdown1.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    img.me-1.icon-15(src='images/eng.png' alt='')
+                    |  Eng
+                  ul.dropdown-menu(aria-labelledby='navbarDropdown1' style='')
+                    li
+                      a.dropdown-item(href='#') Arabic
+          .col-lg-8
+            .subscribe-content
+              h6.fsz-18.fw-bold.mb-30.text-uppercase
+                | subscribe &amp; get 
+                span.color-red1  10% off 
+                |  for your first order
+              .form-group
+                span.icon
+                  i.la.la-envelope
+                input(type='text' placeholder='Enter your email address')
+                button
+                  | subscribe 
+                  i.la.la-long-arrow-right.ms-2.fsz-18
+              p.fsz-13.fst-italic.color-666.mt-2
+                | By subscribing, you&rsquo;re accepted the our 
+                a.color-000.text-decoration-underline(href='#')  Policy 
+    .foot
+      .row.align-items-center
+        .col-lg-4.text-center.text-lg-start
+          p.color-666
+            | &copy; 2024 
+            strong.color-000  Swoo 
+            | . All Rights Reserved
+        .col-lg-4
+          .pay-imgs.text-center.my-3.my-lg-0
+            img(src='images/pay1.png' alt='')
+            img(src='images/pay2.png' alt='')
+            img(src='images/pay3.png' alt='')
+            img(src='images/pay4.png' alt='')
+            img(src='images/pay5.png' alt='')
+        .col-lg-4.text-center.text-lg-end
+          a.text-primary(href='#')
+            i.la.la-mobile.me-1.fsz-16
+            |  Mobile Site
+  .mob-navigation.d-flex.d-lg-none
+    ul
+      li.list
+        a(href='#0')
+          span.icon
+            i.las.la-sync-alt
+          span.text Compare
+      li.list
+        a(href='#0')
+          span.icon
+            i.lar.la-heart
+          span.text Favorite
+      li.list.active
+        a(href='#0')
+          span.icon
+            i.las.la-home
+          span.text Home
+      li.list
+        a(href='#0')
+          span.icon
+            i.las.la-shopping-bag
+          span.text Cart
+      li.list
+        a(href='#0')
+          span.icon
+            i.las.la-user
+          span.text Profile
+      li.indicator
+// End footer
+// Start to top button
+//
+  <a href="#" class="to_top">
+  <i class="la la-angle-up"></i>
+  </a>
+// End to top button
+// request
+script(src='js/jquery-3.0.0.min.js')
+script(src='js/jquery-migrate-3.0.0.min.js')
+script(src='js/bootstrap.bundle.min.js')
+script(src='js/wow.min.js')
+script(src='js/jquery.fancybox.js')
+script(src='js/lity.js')
+script(src='js/swiper8-bundle.min.js')
+script(src='js/jquery.waypoints.min.js')
+script(src='js/jquery.counterup.js')
+script(src='js/parallaxie.js')
+script(src='js/iziToast.min.js')
+// ===== gsap scripts =====
+script(src='js/gsap.min.js')
+//
+  <script src="../common/assets/js/gsap_lib/ScrollSmoother.min.js"></script>
+  <script src="../common/assets/js/gsap_lib/ScrollTrigger.min.js"></script>
+  <script src="../common/assets/js/gsap_lib/SplitText.min.js"></script>
+script(src='js/common_js.js')
+// ===== home scripts =====
+// <script src="../home_tech/assets/js/home_3_scripts.js"></script>
+// ===== innerpages scripts =====
+script(src='js/inner_pages.js')

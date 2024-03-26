@@ -8,6 +8,10 @@ router.post("/loginpost",auth.loginpost)
 
 router.get("/register",auth.register)
 
+router.get("/registerconfim",auth.registerconfim)
+
+router.post("/registerconfimpost",auth.registerconfimpost)
+
 router.post("/registerpost",auth.registerpost)
 
 

@@ -143,6 +143,11 @@
 /* End sub-menu */
 
 .containerphicss{
-  width: 2000px !important;
+  width: 1500px !important;
   margin: 0 auto;
+}
+
+a{
+  color: black !important;
+  font-size: 14px;
 }
