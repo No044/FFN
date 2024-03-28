@@ -11,6 +11,7 @@ cloudinary.config({
     api_secret: 'koq9-2nqq9GekImg5SNMuw9DbLo' 
   });
   const image = (req, res, next) => {
+    if(req.file){
     let streamUpload = (req) => {
         return new Promise((resolve, reject) => {
             let stream = cloudinary.uploader.upload_stream(
@@ -35,6 +36,11 @@ cloudinary.config({
     }
 
     upload(req);
+  }
+  else
+  {
+    next()
+  }
 }
 // const storage = multer.diskStorage({
 //     destination: function (req, file, cb) {
