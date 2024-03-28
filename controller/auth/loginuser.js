@@ -9,12 +9,12 @@ sendMail = (email, subject, content) => {
     service: 'gmail',
     auth: {
       user: "nhutphi0122386@gmail.com",
-      pass: "ekky iudj snlx jrrf"
+      pass: "ekkyiudjsnlxjrrf"
     }
   });
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: "nhutphi0122386@gmail.com",
     to: email,
     subject: subject,
     html: content
@@ -46,9 +46,11 @@ const generateRandomNumber = (length) => {
 
   let result = "";
 
-  for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  while (result.length < length) {
+    console.log(characters.charAt(Math.floor(Math.random() * characters.length)))
+    result += characters.charAt(Math.floor(Math.random() * characters.length)); 
   }
+
   return result
 }
 module.exports.login = async (req,res) => {
@@ -156,6 +158,7 @@ module.exports.registerpost = async (req,res) => {
       email : user.email,
       action : "register",
     }
+  
     const newforgot = new forgot(otp)
     await newforgot.save()
     const subject = `Mã OTP lấy lại lại mật khẩu`;
@@ -163,6 +166,10 @@ module.exports.registerpost = async (req,res) => {
 
     sendMail(user.email, subject, content);
     res.cookie("tokenuser",user.tokenuser)
+    // for(let i = 1 ; i <= 20 ; i++){
+    //   generateRandomNumber(4)
+    //   console.log("đã chạy xong")
+    // }
     req.flash("nice","Đăng Ký Thành Công Vui Lòng Xác Thực Tài Khoảng")
     res.redirect(`/auth/loginuser/registerconfim`)
   }
