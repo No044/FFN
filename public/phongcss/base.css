@@ -252,3 +252,6 @@ html {
   height: var(--height);
   border-radius: 2px;
 }
+ .bsh-none {
+  box-shadow: none !important;
+ }
