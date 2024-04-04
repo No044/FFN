@@ -22,7 +22,7 @@ block main
     // Start navbar container
    
     // Start header
-    header.tc-header-style5
+    //- header.tc-header-style5
       .container
         .row.gx-2
           .col-lg-9
@@ -158,62 +158,63 @@ block main
             .title.mb-30
               .row.align-items-center
                 .col-lg-8
-                  h5.fsz-24.fw-bold.text-capitalize Pets Food Categories
+                  h5.fsz-24.fw-bold.text-capitalize Danh Mục Sản Phẩm
                 .col-lg-4.mt-4.mt-lg-0.text-lg-end
                   a.fw-600.text-uppercase.hover-orange1(href="#")
                     | view all
                     i.fal.fa-long-arrow-right.ms-1
             .categories
-              a.cat-item(href="../inner_pages/products.html")
-                .img
-                  img(
-                    alt="" 
-                    src="images/cat1.png"
-                    )
-                span.fsz-13.fw-bold.text-uppercase.mt-20 cat
-              a.cat-item(href="../inner_pages/products.html")
-                .img
-                  img(
-                    alt="" 
-                    src="images/cat2.png"
-                    )
-                span.fsz-13.fw-bold.text-uppercase.mt-20 dog
-              a.cat-item(href="../inner_pages/products.html")
-                .img
-                  img(
-                    alt="" 
-                    src="images/cat3.png"
-                    )
-                span.fsz-13.fw-bold.text-uppercase.mt-20 parrot
-              a.cat-item(href="../inner_pages/products.html")
-                .img
-                  img(
-                    alt="" 
-                    src="images/cat4.png"
-                    )
-                span.fsz-13.fw-bold.text-uppercase.mt-20 Fish
-              a.cat-item(href="../inner_pages/products.html")
-                .img
-                  img(
-                    alt="" 
-                    src="images/cat5.png"
-                    )
-                span.fsz-13.fw-bold.text-uppercase.mt-20 horse
-              a.cat-item(href="../inner_pages/products.html")
-                .img
-                  img(
-                    alt="" 
-                    src="images/cat6.png"
-                    )
-                span.fsz-13.fw-bold.text-uppercase.mt-20 rabbit
-              a.cat-item(href="../inner_pages/products.html")
-                .img
-                  img(
-                    alt="" 
-                    src="images/cat7.png"
-                    )
-                span.fsz-13.fw-bold.text-uppercase.mt-20 hen
-              a.cat-item(href="../inner_pages/products.html")
+              each item in category
+                a.cat-item(href="../inner_pages/products.html")
+                  .img
+                    img(
+                      alt="" 
+                      src=item.thumbnail
+                     )
+                  span.fsz-13.fw-bold.text-uppercase.mt-20 #{item.title}
+              //- a.cat-item(href="../inner_pages/products.html")
+              //-   .img
+              //-     img(
+              //-       alt="" 
+              //-       src="images/cat2.png"
+              //-       )
+              //-   span.fsz-13.fw-bold.text-uppercase.mt-20 dog
+              //- a.cat-item(href="../inner_pages/products.html")
+              //-   .img
+              //-     img(
+              //-       alt="" 
+              //-       src="images/cat3.png"
+              //-       )
+              //-   span.fsz-13.fw-bold.text-uppercase.mt-20 parrot
+              //- a.cat-item(href="../inner_pages/products.html")
+              //-   .img
+              //-     img(
+              //-       alt="" 
+              //-       src="images/cat4.png"
+              //-       )
+              //-   span.fsz-13.fw-bold.text-uppercase.mt-20 Fish
+              //- a.cat-item(href="../inner_pages/products.html")
+              //-   .img
+              //-     img(
+              //-       alt="" 
+              //-       src="images/cat5.png"
+              //-       )
+              //-   span.fsz-13.fw-bold.text-uppercase.mt-20 horse
+              //- a.cat-item(href="../inner_pages/products.html")
+              //-   .img
+              //-     img(
+              //-       alt="" 
+              //-       src="images/cat6.png"
+              //-       )
+              //-   span.fsz-13.fw-bold.text-uppercase.mt-20 rabbit
+              //- a.cat-item(href="../inner_pages/products.html")
+              //-   .img
+              //-     img(
+              //-       alt="" 
+              //-       src="images/cat7.png"
+              //-       )
+              //-   span.fsz-13.fw-bold.text-uppercase.mt-20 hen
+              //- a.cat-item(href="../inner_pages/products.html")
                 .img
                   img(
                     alt="" 
@@ -221,7 +222,7 @@ block main
                     )
                 span.fsz-13.fw-bold.text-uppercase.mt-20 tortoise
             .cat-foot.text-center.pt-30.position-relative.znd10
-              h3.fsz-24.fw-300 12k+ active users everyday
+              h3.fsz-24.fw-300 Top Các Danh Mục Phổ Biến
       // End categories
       // Start products-slider
       section.tc-products-slider-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
@@ -1070,7 +1071,7 @@ block main
                             i.fas.fa-heart
       // End tabs
       // Start blog
-      section.tc-blog-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
+      //- section.tc-blog-style5.mt-30.wow.fadeInUp.slow(data-wow-delay="0.2s")
         .container
           .content.border.radius-4.p-30.overflow-hidden
             .title.mb-30

@@ -988,69 +988,67 @@ head
                 .dropdown-divider
                 a.dropdown-item.text-danger(href='#') Block
       .chat-body
-        // .no-message
-        //
-          <div class="no-message-container">
-          <div class="row mb-5">
-          <div class="col-md-4 offset-4">
-          <img src="./dist/media/svg/undraw_empty_xct9.svg" class="img-fluid" alt="image">
-          </div>
-          </div>
-          <p class="lead">Select a chat to read messages</p>
-          </div>
-        .messages
-          .message-item.outgoing-message
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
-              div
-                h5 Mirabelle Tow
-                .time
-                  | 01:20 PM 
-                  i.ti-double-check.text-info
-            .message-content
-              | Hello how are you?
-          .message-item
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
-              div
-                h5 Byrom Guittet
-                .time 01:35 PM
-            .message-content
-              | I&apos;m fine, how are you &#x1F603;
-          .message-item.outgoing-message
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
-              div
-                h5 Mirabelle Tow
-                .time
-                  | 05:31 PM 
-                  i.ti-double-check.text-info
-            .message-content
-              | I&apos;m fine thank you. I expect you to send me some files.
-          .message-item
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
-              div
-                h5 Byrom Guittet
-                .time 10:12 PM
-            .message-content
-              | What files are you talking about? I&apos;m sorry I can&apos;t remember right now.
-          .message-item.outgoing-message
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
-              div
-                h5 Mirabelle Tow
-                .time
-                  | 11:56 PM 
-                  i.ti-double-check.text-info
-            .message-content
-              | I want those files for you. I want you to send 1 PDF and 1 image file.
-          .message-item
+        .messages(myid=userid)
+          each item in data 
+            if(userid  == item.user_id)
+              div(class="message-item outgoing-message")
+                .message-content
+                  | #{item.content}
+            else 
+              div(class="message-item")
+                .message-avatar
+                  figure.avatar
+                    img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
+                  div
+                    h5 #{item.fullname}
+                    .time
+                      | 01:20 PM 
+                      i.ti-double-check.text-info
+                .message-content
+                  | #{item.content}
+
+            
+          //- .message-item
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
+          //-     div
+          //-       h5 Byrom Guittet
+          //-       .time 01:35 PM
+          //-   .message-content
+          //-     | I&apos;m fine, how are you &#x1F603;
+          //- .message-item.outgoing-message
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
+          //-     div
+          //-       h5 Mirabelle Tow
+          //-       .time
+          //-         | 05:31 PM 
+          //-         i.ti-double-check.text-info
+          //-   .message-content
+          //-     | I&apos;m fine thank you. I expect you to send me some files.
+          //- .message-item
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
+          //-     div
+          //-       h5 Byrom Guittet
+          //-       .time 10:12 PM
+          //-   .message-content
+          //-     | What files are you talking about? I&apos;m sorry I can&apos;t remember right now.
+          //- .message-item.outgoing-message
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
+          //-     div
+          //-       h5 Mirabelle Tow
+          //-       .time
+          //-         | 11:56 PM 
+          //-         i.ti-double-check.text-info
+          //-   .message-content
+          //-     | I want those files for you. I want you to send 1 PDF and 1 image file.
+          //- .message-item
             .message-avatar
               figure.avatar
                 img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
@@ -1069,58 +1067,58 @@ head
                     a(href='#') Download
                   li.list-inline-item.mb-0
                     a(href='#') View
-          .message-item.messages-divider.sticky-top(data-label='Today')
-          .message-item
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
-              div
-                h5 Byrom Guittet
-                .time 07:15 AM
-            .message-content
-              | I&apos;m about to send the other file now.
-          .message-item.outgoing-message
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
-              div
-                h5 Mirabelle Tow
-                .time
-                  | 07:45 AM 
-                  i.ti-double-check.text-info
-            .message-content
-              | Thank you so much. These files are very important to me. I guess you didn&apos;t make any changes
-              | to these files. So I need the original versions of these files. Thank you very much again.
-          .message-item
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
-              div
-                h5 Byrom Guittet
-                .time 08:00 AM
-            .message-content
-              | I thank you. We are glad to help you. &#x1F603;
-          .message-item.outgoing-message
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
-              div
-                h5 Mirabelle Tow
-                .time
-                  | 09:23 AM 
-                  i.ti-double-check.text-info
-            .message-content
-              | &#x1F603; &#x1F603; &#x2764; &#x2764;
-          .message-item
-            .message-avatar
-              figure.avatar
-                img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
-              div
-                h5 Byrom Guittet
-                .time 10:43 AM
-            figure
-              img.w-25.img-fluid.rounded(src='images/image1.jpg' alt='image')
-          .message-item.outgoing-message
+          //- .message-item.messages-divider.sticky-top(data-label='Today')
+          //- .message-item
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
+          //-     div
+          //-       h5 Byrom Guittet
+          //-       .time 07:15 AM
+          //-   .message-content
+          //-     | I&apos;m about to send the other file now.
+          //- .message-item.outgoing-message
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
+          //-     div
+          //-       h5 Mirabelle Tow
+          //-       .time
+          //-         | 07:45 AM 
+          //-         i.ti-double-check.text-info
+          //-   .message-content
+          //-     | Thank you so much. These files are very important to me. I guess you didn&apos;t make any changes
+          //-     | to these files. So I need the original versions of these files. Thank you very much again.
+          //- .message-item
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
+          //-     div
+          //-       h5 Byrom Guittet
+          //-       .time 08:00 AM
+          //-   .message-content
+          //-     | I thank you. We are glad to help you. &#x1F603;
+          //- .message-item.outgoing-message
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
+          //-     div
+          //-       h5 Mirabelle Tow
+          //-       .time
+          //-         | 09:23 AM 
+          //-         i.ti-double-check.text-info
+          //-   .message-content
+          //-     | &#x1F603; &#x1F603; &#x2764; &#x2764;
+          //- .message-item
+          //-   .message-avatar
+          //-     figure.avatar
+          //-       img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
+          //-     div
+          //-       h5 Byrom Guittet
+          //-       .time 10:43 AM
+          //-   figure
+          //-     img.w-25.img-fluid.rounded(src='images/image1.jpg' alt='image')
+          //- .message-item.outgoing-message
             .message-avatar
               figure.avatar
                 img.rounded-circle(src='images/women_avatar5.jpg' alt='image')
@@ -1131,8 +1129,8 @@ head
                   i.ti-double-check.text-info
             .message-content
               | You are good &#x2764;&#x2764;
-          .message-item.messages-divider(data-label='1 message unread')
-          .message-item
+          //- .message-item.messages-divider(data-label='1 message unread')
+          //- .message-item
             .message-avatar
               figure.avatar
                 img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
@@ -1142,11 +1140,11 @@ head
             .message-content
               | I sent you all the files. Good luck with &#x1F603;
       .chat-footer
-        form
+        form(formsendmessclient)
           div
-            button.btn.btn-light.mr-3(data-toggle='tooltip' title='Emoji' type='button')
+            button.btn.btn-light.mr-3(data-toggle='tooltip' title='Emoji' buttonemoji type='button')
               i(data-feather='smile')
-          input.form-control(type='text' placeholder='Write a message.')
+          input.form-control(type='text' inputchatclient placeholder='Write a message.')
           .form-buttons
             button.btn.btn-light(data-toggle='tooltip' title='Add files' type='button')
               i(data-feather='paperclip')
@@ -1154,6 +1152,8 @@ head
               i(data-feather='mic')
             button.btn.btn-primary(type='submit')
               i(data-feather='send')
+            div(class="tooltip" role="tooltip")
+              emoji-picker(class="light")
     // ./ chat
     .sidebar-group
       #contact-information.sidebar
@@ -1262,9 +1262,15 @@ head
   // ./ content
 // ./ layout
 // Bundle
+script(type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js") 
 script(src='js/bundle.js')
 script(src='js/enjoyhint.min.js')
 // App scripts
 script(src='js/app.min.js')
 // Examples
-script(src='js/examples.js')
+//- script(src='js/examples.js')
+script(src="/socket.io/socket.io.js")
+script(src="/jsclient/io.js")
+script(type="module" src="/jsclient/chat.js")
+
+
