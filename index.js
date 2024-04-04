@@ -7,6 +7,8 @@ const routerauth = require("./router/auth/main")
 const dotevn = require("dotenv")
 const connect = require("./database/database")
 const system = require("./setting/system")
+const http = require('http');
+const { Server } = require("socket.io");
 const flash = require('express-flash');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -14,6 +16,9 @@ const path = require('path');
 dotevn.config();
 const app = express();
 const port = process.env.port;
+const server = http.createServer(app);
+const io = new Server(server);
+global._io = io
 
 // app.set("view","./views")
 // app.set("view engine", "pug")
@@ -36,6 +41,7 @@ router(app);
 routeradmin(app);
 routerauth(app);
 connect.connect();
-app.listen(port, () => {
+
+server.listen(port, () => {
     console.log('Đây là app của tôi')
 })
