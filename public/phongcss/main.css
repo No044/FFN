@@ -1626,6 +1626,7 @@ i.home-product-item__like-icon-fill {
 
 .shop-overview__item {
   display: flex;
+  align-items: center;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
   flex: none;
@@ -1641,3 +1642,9 @@ i.home-product-item__like-icon-fill {
 }
 /* End Shop seller */
 
+/* Detail Product */
+.detail_product .thumnail {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+/* End Detail Product */
