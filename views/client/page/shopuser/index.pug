@@ -13,53 +13,53 @@ block main
                   .shop-info__title
                     | #{data.fullName}
                   .shop-info__online-status
-                    | Online 21 ph&uacute;t tr&#x1B0;&#x1EDB;c
+                    | Online 21 Phút trước
             .col.l-12.m-6.full-home-banners__right-link(href='#')
               .shop-info
                 button.btn-ouline
                   i.fa-solid.fa-plus
-                  |                                         theo d&otilde;i
+                  | theo dõi
                 button.btn-ouline
                   i.fa-brands.fa-rocketchat
-                  |                                         chat
+                  | chat
         .col.l-8.m-12.c-12
           .full-home-banners__main
             .shop-overview
               .shop-overview__item
                 i.fa-solid.fa-shop
                 .shop-overview__content
-                  span S&#x1EA3;n ph&#x1EA9;m: 
-                  span.red-color 259
+                  span Sản phẩm: 
+                  span.red-color.mx-3 259
               .shop-overview__item
                 i.fa-solid.fa-user
                 .shop-overview__content
                   span &Dstrok;ang theo: 
-                  span.red-color 1
+                  span.red-color.mx-3 1
               .shop-overview__item
                 i.fa-solid.fa-comment
                 .shop-overview__content
                   span T&#x1EC9; l&#x1EC7; ph&#x1EA3;n h&#x1ED3;i chat: 
-                  span.red-color 81% (Trong V&agrave;i Gi&#x1EDD;)
+                  span.red-color.mx-3 81% (Trong V&agrave;i Gi&#x1EDD;)
               .shop-overview__item
                 i.fa-solid.fa-users
                 .shop-overview__content
                   span Ng&#x1B0;&#x1EDD;i theo d&otilde;i: 
-                  span.red-color 6.6k
+                  span.red-color.mx-3 6.6k
               .shop-overview__item
                 i.fa-solid.fa-star
                 .shop-overview__content
                   span &Dstrok;&aacute;nh gi&aacute;: 
-                  span.red-color 4.8 (11.5k &Dstrok;&aacute;nh gi&aacute;)
+                  span.red-color.mx-3 4.8 (11.5k &Dstrok;&aacute;nh gi&aacute;)
               .shop-overview__item
                 i.fa-solid.fa-user-check
                 .shop-overview__content
                   span Tham gia: 
-                  span.red-color 21 th&aacute;ng tr&#x1B0;&#x1EDB;c
+                  span.red-color.mx-3 21 th&aacute;ng tr&#x1B0;&#x1EDB;c
               .shop-overview__item
                 i.fa-solid.fa-shop
                 .shop-overview__content
                   span T&#x1EC9; l&#x1EC7; shop h&#x1EE7;y &dstrok;&#x1A1;n: 
-                  span.red-color 1%
+                  span.red-color.mx-3 1%
     //-   ul.app__banner-list
         li.banner-list__item
           a.banner-list__link(href='')
@@ -204,7 +204,7 @@ block main
                         i.home-product-item__star--gold.fa-solid.fa-star
                         i.home-product-item__star--gold.fa-solid.fa-star
                         i.fa-solid.fa-star
-                      span.home-product-item__sold #{item.stock}
+                      span.home-product-item__sold #{item.stock} #{'đã bán'}
                     .home-product-item__origin
                       span.home-product-item__brand HanoiComputer
                       span.home-product-item__origin-name Acer
@@ -212,7 +212,7 @@ block main
                       i.fa-solid.fa-check
                       span Y&ecirc;u th&iacute;ch
                     .home-product-item__sale-off
-                      span.home-product-item__sale-off-percent #{item.discountPercentage}
+                      span.home-product-item__sale-off-percent #{item.discountPercentage}#{"%"}
 
           // Pagination
           ul.pagination.home-product__pagination
