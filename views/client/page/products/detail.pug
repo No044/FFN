@@ -30,7 +30,7 @@ block main
             ) #{messages.nice} <span close-alert>x</span>
       // Preloader
       //- .preloader
-      //-   .clear-loading.loading-effect-2
+      //-   .clear-loading.loading-effsect-2
           span
       // /.preloader
       //- section#header.header
@@ -1103,13 +1103,14 @@ block main
                   
                       .row.sm-gutter-tablet(style='background-color: rgba(0,0,0,.6); border-radius: 4px;')
                         .col.l-12.m-6.full-home-banners__right-link
-                          .shop-info
-                            img.shop-info__avarta(src='https://down-bs-vn.img.susercontent.com/01c943670a03134681a206be05f1d9ba_tn.webp' alt='')
-                            div(style='margin-left: 8px;')
-                              .shop-info__title
-                                | Elmich Việt Nam Chính Hảng
-                              .shop-info__online-status
-                                | Online 21 Phút trước
+                          a(href=`/shopproducts/user/${datauser.id}`) 
+                            .shop-info
+                              img.shop-info__avarta(src=datauser.avatar alt='')
+                              div(style='margin-left: 8px;')
+                                .shop-info__title
+                                  | #{datauser.fullName}
+                                .shop-info__online-status
+                                  | Online 21 Phút trước
                         .col.l-12.m-6.full-home-banners__right-link(href='#')
                           .shop-info
                             button.btn-ouline

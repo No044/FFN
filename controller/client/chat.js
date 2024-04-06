@@ -17,6 +17,13 @@ module.exports.index = async (req,res) => {
 
          })
         })
+        socket.on("client_send_typing", (data) => {
+          console.log(data, "đã chạy vào dây")
+           socket.broadcast.emit("Sever_render_typing" , {
+                infor : res.locals.userclient,
+                type : data
+           } )
+        })
       })
 
       const newdata = await chat.find({

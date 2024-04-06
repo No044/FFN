@@ -1,5 +1,5 @@
 const products = require("../../models/products")
-
+const account = require("../../models/account")
 module.exports.index = async (req,res) => {
     const dataproduct = await products.find({
         status: "active",
@@ -22,9 +22,13 @@ module.exports.detail = async (req,res) => {
   })
     data.priceNew = ((data.price / 100) * (100-data.discountPercentage)).toFixed(0);
     data.priceNew = data.priceNew.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' VNĐ';  
-    
+  const datauser = await account.findOne({
+     token : data.shopid
+  }).select("-password -token")
   console.log(data)
+  console.log(datauser)
   res.render("client/page/products/detail",{
-    data : data
+    data : data,
+    datauser : datauser
 })
 }

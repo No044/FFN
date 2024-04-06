@@ -10,6 +10,7 @@ if(formsendmess){
         if(content){
             socket.emit("client_send_messages",content)
             data.value = ""
+
         }
         console.log(content) 
     })
@@ -43,9 +44,11 @@ socket.on("Sever_render_mess_client",(data) => {
         </div>
         <div class="message-content">${data.content}</div>
     `};
-   room.appendChild(div)
-   console.log(room)
+    const typing = document.querySelector(".inner-list-typing")
+   room.insertBefore(div,typing)
    chatbody.scrollTop = chatbody.scrollHeight
+   socket.emit("client_send_typing","hidden")
+
  })
 
 
@@ -54,7 +57,7 @@ socket.on("Sever_render_mess_client",(data) => {
     chatbody.scrollTop = chatbody.scrollHeight
  }
 
-
+//icon
  const buttonemoji = document.querySelector("[buttonemoji]")
 if(buttonemoji){
     const tooltip = document.querySelector('.tooltip');
@@ -71,3 +74,55 @@ if(buttonemoji){
      
   });
 }
+
+
+// typing
+
+const inputsendmess = document.querySelector("[inputchatclient]")
+let setimetyping;
+
+if(inputsendmess)
+{
+    inputsendmess.addEventListener("keyup" , () => {
+          socket.emit("client_send_typing","show")
+          clearTimeout(setimetyping)
+          setimetyping = setTimeout(() => {
+            console.log("đã chạy vào remove")
+            socket.emit("client_send_typing","hidden")
+        },3000)
+    })
+        
+
+}
+
+socket.on("Sever_render_typing",(data) => {
+    const id = data.infor._id
+    console.log(data.infor._id)
+    const typing = document.querySelector(".inner-list-typing")
+    if(data.type == "show"){
+        const div = document.createElement("div")
+        div.classList.add("box-typing")
+        div.setAttribute("userid",id)
+
+        const check = typing.querySelector(`.box-typing[userid="${id}"]`)
+        if(!check){
+        div.innerHTML = `
+            <div class="inner-name">${data.infor.fullName}</div>
+            <div class="inner-dots">
+                <span></span>
+                <span></span>
+                <span></span>`
+        typing.appendChild(div)
+    }
+    }
+    else{
+        const childbox = typing.querySelector(`.box-typing[userid="${id}"]`)
+        console.log(childbox)
+        if(childbox){
+            console.log(childbox)
+        typing.removeChild(childbox)
+        }
+    
+    }
+   
+})

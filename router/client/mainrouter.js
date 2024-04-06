@@ -12,7 +12,7 @@ module.exports = (app) => {
 
     app.use("/shopproducts",shopproducts)
 
-    app.use("/cart",cart)
+    app.use("/cart",pravite,cart)
 
     app.use("/chat",pravite,chat)
 
