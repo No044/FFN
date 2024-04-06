@@ -1096,6 +1096,7 @@ block main
         .container
           .row
             .col-md-6
+<<<<<<< HEAD
               .row 
                 .col-md-12
                    img(src=data.thumbnail)
@@ -1119,6 +1120,11 @@ block main
                             button.btn-ouline
                               i.fa-brands.fa-rocketchat
                               |  chat
+=======
+              .detail_product
+                img(class="thumnail" src=data.thumbnail)
+                
+>>>>>>> dba80cd74fa5b787bf5a78db21252662d3b80c6c
             .col-md-6
               .product-detail
                 .header-detail
@@ -1210,6 +1216,66 @@ block main
           // /.row
         // /.container
       // /.flat-product-detail
+      //- product-shop-seller
+      .container
+        .row.sm-gutter.app__banner-content
+          .col.l-4.m-12
+            .row.sm-gutter-tablet(style='background-color: rgba(0,0,0,.6); border-radius: 4px;')
+              .col.l-12.m-6.full-home-banners__right-link
+                .shop-info
+                  img.shop-info__avarta(src='https://down-bs-vn.img.susercontent.com/01c943670a03134681a206be05f1d9ba_tn.webp', alt='')
+                  div(style='margin-left: 8px;')
+                    .shop-info__title
+                      | Elmich Việt Nam Chính Hãng
+                    .shop-info__online-status
+                      | Online 21 Phút trước
+              .col.l-12.m-6.full-home-banners__right-link(href='#')
+                .shop-info
+                  button.btn-ouline
+                    i.fa-solid.fa-plus
+                    | theo dõi
+                  button.btn-ouline
+                    i.fa-brands.fa-rocketchat
+                    | chat
+          .col.l-8.m-12.c-12
+            .full-home-banners__main
+              .shop-overview
+                .shop-overview__item
+                  i.fa-solid.fa-shop
+                  .shop-overview__content
+                    span Sản phẩm: 
+                    span.red-color.mx-3 259
+                .shop-overview__item
+                  i.fa-solid.fa-user
+                  .shop-overview__content
+                    span Đang theo:
+                    span.red-color.mx-3 1
+                .shop-overview__item
+                  i.fa-solid.fa-comment
+                  .shop-overview__content
+                    span Tỉ lệ phản hồi chat: 
+                    span.red-color.mx-3 81% #{'('}Trong Vài Giờ#{')'}
+                .shop-overview__item
+                  i.fa-solid.fa-users
+                  .shop-overview__content
+                    span Người theo dõi: 
+                    span.red-color.mx-3 6.6k
+                .shop-overview__item
+                  i.fa-solid.fa-star
+                  .shop-overview__content
+                    span Đánh giá:
+                    span.red-color.mx-3 4.8 #{'('}11.5k Đánh giá#{')'}
+                .shop-overview__item
+                  i.fa-solid.fa-user-check
+                  .shop-overview__content
+                    span Tham gia: 
+                    span.red-color.mx-3 21 tháng trước
+                .shop-overview__item
+                  i.fa-solid.fa-shop
+                  .shop-overview__content
+                  span Tỉ lệ shop hủy đơn: 
+                  span.red-color.mx-3 1%
+      //- end product-shop-seller
       section.flat-product-content
         ul.product-detail-bar
           li.active Description
