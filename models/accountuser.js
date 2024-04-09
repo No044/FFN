@@ -7,7 +7,9 @@ const accountuser = new mongoose.Schema(
         password : String,
         tokenuser : String,
         phone : String,
-        avatar : String,
+        avatar : {
+            type : String,
+            default : "https://hocdohoacaptoc.com/storage/2022/02/avata-dep-nam-2.jpg"},
         status : {
            type : String,
            default : "active"

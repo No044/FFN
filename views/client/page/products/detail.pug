@@ -1209,9 +1209,10 @@ block main
                   button.btn-ouline
                     i.fa-solid.fa-plus
                     | theo dõi
-                  button.btn-ouline
+                  button.btn-ouline(datauserid = datauser.id)
                     i.fa-brands.fa-rocketchat
                     | chat
+                  form(submitchat action="" method="get")
           .col.l-8.m-12.c-12
             .full-home-banners__main
               .shop-overview

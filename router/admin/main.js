@@ -7,6 +7,7 @@ const premisson = require("./premisson")
 const user = require("./user")
 const myaccout = require("./myaccout")
 const routerpravite = require("../../middlewares/auth/routerpravite")
+const chat = require("./chat")
 module.exports = (app) =>{
     const admin = system.prefixAdmin
     app.use(`/${admin}/dashboard`,routerpravite,dashboard)
@@ -16,4 +17,5 @@ module.exports = (app) =>{
     app.use(`/${admin}/premisson`,routerpravite,premisson)
     app.use(`/${admin}/user`,routerpravite,user)
     app.use(`/${admin}/myaccount`,routerpravite,myaccout)
+    app.use(`/${admin}/chat`,chat)
 }

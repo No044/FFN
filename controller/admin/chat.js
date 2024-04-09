@@ -1,10 +1,9 @@
 const chat = require("../../models/chat")
-const user = require("../../models/accountuser")
+const userclient = require("../../models/accountuser")
 const cloudinary = require("cloudinary").v2;
 const streamifier = require("streamifier");
 const usershop = require("../../models/account")
 const room = require("../../models/room");
-const { deleteMany } = require("../../models/products");
 // cloudinary
 cloudinary.config({
    cloud_name: 'dkbvldq5r', 
@@ -32,37 +31,38 @@ const uploadToCloudinary = async (buffer) => {
   return result.url;
 }
 module.exports.index = async (req,res) => {
-   const id = req.params.id
-   const userid = res.locals.userclient.id
-   console.log(res.locals.userclient.fullName)
-
+   const id = req.query.id
+   const user = await usershop.findOne({
+      token : req.cookies.token
+   })
+   const userid = user.id
    const arrayuser = []
    arrayuser.push(id)
    arrayuser.push(userid)
    const dataroom = await room.findOne({
       users: { $all: arrayuser, $size: arrayuser.length }
    })
-   if(!dataroom){
+   if(!dataroom && id){
       const newroom = new room({ users: arrayuser });
       await newroom.save();
    }
     _io.once("connection", async (socket) => {
-       
          const roomchat = await room.findOne({
             users: { $all: arrayuser, $size: arrayuser.length }
          })
-       
+        if(roomchat){
          socket.join(roomchat.id);
-       
+        }
+      
 
         socket.on("client_send_messages", async (data) => {
             const images = [];
-
             for (const image of data.images) {
                const url = await uploadToCloudinary(image);
                images.push(url);
             }
-            
+           
+            console.log(data)
            if(data){
                const info = {
                   user_id : userid,
@@ -73,10 +73,11 @@ module.exports.index = async (req,res) => {
                
                const mess = new chat(info)
                await mess.save()
+               
                _io.to(roomchat.id).emit("Sever_render_mess_client", {
                   content : mess.content,
                   userid : mess.user_id,
-                  infor : res.locals.userclient,
+                  infor : user,
                   images: images  
                })
               
@@ -88,7 +89,7 @@ module.exports.index = async (req,res) => {
    )
         socket.on("client_send_typing", (data) => {
            socket.broadcast.to(roomchat.id).emit("Sever_render_typing" , {
-                infor : res.locals.userclient,
+                infor : user,
                 type : data
            } )
         })
@@ -96,28 +97,53 @@ module.exports.index = async (req,res) => {
       // const datausershop = await usershop.findOne({
       //    _id : id
       // })
-      const roomchat = await room.findOne({
-         users: { $all: arrayuser, $size: arrayuser.length }
-      })
-      console.log(roomchat.id)
-      const newdata = await chat.find({
-         room_chat_id : roomchat.id
-      })
+    
+      const bongchat = await room.find({
+         users : userid
+    })
+
+    let handlebongchat = bongchat.map((item) => {
+     
+        let newdata = item.users.filter((iduser) => {
+         return iduser !== userid 
+        })
+        return newdata.toString()
       
-      if(newdata){
-         for(const item of newdata){
-            const datauser = await usershop.findOne({
-               _id : item.user_id
-            })
-            console.log(datauser)
-            if(datauser)
-            {item.fullname = datauser.fullName}
-         }
+    })
+    
+    const userbongchat = await userclient.find({ _id: { $in: handlebongchat } });
+
+
+    let newdata
+
+      if(id){
+         const roomchat = await room.findOne({
+            users: { $all: arrayuser, $size: arrayuser.length }
+         })
+         console.log(roomchat.id)
+          newdata = await chat.find({
+            room_chat_id : roomchat.id
+         })
+         if(newdata){
+            for(const item of newdata){
+               const datauser = await userclient.findOne({
+                  _id : item.user_id
+               })
+               if(datauser){
+               item.fullName = datauser.fullName
+               }
+            }
+         }   
       }
- res.render("client/page/chat/index",
+      else{
+         newdata = null
+      }
+      
+ res.render("admin/page/chat/index",
     {
         data : newdata,
-        userid : userid
+        userid : userid,
+        bongchat : userbongchat
     }
  )
 }

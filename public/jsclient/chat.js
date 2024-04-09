@@ -3,14 +3,23 @@ import * as Popper from 'https://cdn.jsdelivr.net/npm/@popperjs/core@^2/dist/esm
 //client send messages
 const formsendmess = document.querySelector("[formsendmessclient]")
 if(formsendmess){
+    const upload = new FileUploadWithPreview.FileUploadWithPreview('upload-images', {
+        multiple: true,
+        maxFileCount: 6
+      });
     formsendmess.addEventListener("submit",(e) => {
         e.preventDefault()
+       
         const data = formsendmess.querySelector("input")
         const content = data.value
-        if(content){
-            socket.emit("client_send_messages",content)
+        const images = upload.cachedFileArray || []
+        if(content || images.length > 0){
+            socket.emit("client_send_messages",{
+                content : content,
+                images : images
+            })
             data.value = ""
-
+            upload.resetPreviewPanel();
         }
         console.log(content) 
     })
@@ -25,15 +34,33 @@ socket.on("Sever_render_mess_client",(data) => {
     console.log(userid)
     const div = document.createElement("div")
     div.classList.add("message-item")
+    let rdimages = ""
+    let content = ""
+   
+  
     if(userid == data.userid){
+        if(data.content){
+            content += `<div class="message-content">${data.content}</div>`
+        }
+        if(data.images){
+            rdimages += "<div class=inner-images>"
+             data.images.forEach((item) => {
+               rdimages += `<img src="${item}"/>`
+   
+             });
+             rdimages += "</div>"
+             console.log(rdimages)
+       }
         div.classList.add("outgoing-message")
         div.innerHTML = `
-        <div class="message-content">${data.content}</div>
+        ${content}
+        ${rdimages}
         `
+      
     }
     else{
-        div.innerHTML = `
-        <div class="message-avatar">
+        if(data.content){
+            content += ` <div class="message-avatar">
             <figure class="avatar">
                 <img class="rounded-circle" src="images/women_avatar5.jpg" alt="image">
             </figure>
@@ -42,11 +69,26 @@ socket.on("Sever_render_mess_client",(data) => {
                 <div class="time">01:20 PM <i class="ti-double-check text-info"></i></div>
             </div>
         </div>
-        <div class="message-content">${data.content}</div>
-    `};
-    const typing = document.querySelector(".inner-list-typing")
+        <div class="message-content">${data.content}</div>`
+        }
+        if(data.images){
+            rdimages += "<div class=inner-imagesright>"
+             data.images.forEach((item) => {
+               rdimages += `<img src="${item}"/>`
+   
+             });
+             rdimages += "</div>"
+             console.log(rdimages)
+       }
+        div.innerHTML = `
+         ${content}
+         ${rdimages}
+        `
+    };
+   const typing = document.querySelector(".inner-list-typing")
    room.insertBefore(div,typing)
    chatbody.scrollTop = chatbody.scrollHeight
+   const gallery = new Viewer(div);
    socket.emit("client_send_typing","hidden")
 
  })
@@ -125,4 +167,24 @@ socket.on("Sever_render_typing",(data) => {
     
     }
    
+})
+
+const message = document.querySelector(".messages")
+console.log(message)
+if(message){
+    const gallery = new Viewer(message);
+
+}
+
+
+const iduserbongchat = document.querySelectorAll("[iduserbongchat]")
+iduserbongchat.forEach((item) => {
+    item.addEventListener("click",() => {
+       let url = new URL(window.location.href)
+       const iduser = item.getAttribute("iduserbongchat")
+       if(iduser){
+        url.searchParams.set("id",iduser)
+       }
+       window.location.href = url.href
+    })
 })

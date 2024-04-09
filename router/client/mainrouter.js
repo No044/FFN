@@ -3,7 +3,7 @@ const homerouter = require("./homerouter")
 const productsrouter = require("./productsrouter")
 const cart = require("./cart")
 const shopproducts = require("./shopproducts")
-const chat = require("./chat")
+const infor = require("./chat")
 const pravite = require("../../middlewares/client/praviteclient")
 module.exports = (app) => {
     app.use("/",homerouter);
@@ -14,6 +14,7 @@ module.exports = (app) => {
 
     app.use("/cart",pravite,cart)
 
-    app.use("/chat",pravite,chat)
+    app.use("/chat",pravite,infor)
+
 
 }

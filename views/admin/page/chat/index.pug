@@ -15,7 +15,6 @@ head
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.css")
 
 // page loading
-.page-loading
 // ./ page loading
 // page tour modal
 #pageTour.modal.fade(tabindex='-1' role='dialog' aria-hidden='true')
@@ -424,232 +423,18 @@ head
           input.form-control(type='text' placeholder='Search chats')
         .sidebar-body
           ul.list-group.list-group-flush
-            li.list-group-item
-              figure.avatar.avatar-state-success
-                img.rounded-circle(src='images/man_avatar1.jpg' alt='image')
-              .users-list-body
-                div
-                  h5.text-primary Townsend Seary
-                  p What&apos;s up, how are you?
-                .users-list-action
-                  .new-message-count 3
-                  small.text-primary 03:41 PM
-            li.list-group-item
-              figure.avatar.avatar-state-warning
-                img.rounded-circle(src='images/man_avatar4.jpg' alt='image')
-              .users-list-body
-                div
-                  h5.text-primary Forest Kroch
-                  p
-                    i.fa.fa-camera.mr-1
-                    |  Photo
-                .users-list-action
-                  .new-message-count 1
-                  small.text-primary Yesterday
-            li.list-group-item.open-chat
-              div
-                figure.avatar
-                  img.rounded-circle(src='images/man_avatar3.jpg' alt='image')
-              .users-list-body
-                div
-                  h5 Byrom Guittet
-                  p I sent you all the files. Good luck with &#x1F603;
-                .users-list-action
-                  small.text-muted 11:05 AM
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              div
-                figure.avatar
-                  img.rounded-circle(src='images/women_avatar1.jpg' alt='image')
-              .users-list-body
-                div
-                  h5 Margaretta Worvell
-                  p I need you today. Can you come with me?
-                .users-list-action
-                  small.text-muted 03:41 PM
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              figure.avatar
-                span.avatar-title.bg-warning.bg-success.rounded-circle
-                  i.fa.fa-users
-              .users-list-body
-                div
-                  h5 &#x1F60D; My Family &#x1F60D;
-                  p
-                    strong Maher Ruslandi: 
-                    | Hello!!!
-                .users-list-action
-                  small.text-muted Yesterday
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              div
-                figure.avatar.avatar-state-warning
-                  img.rounded-circle(src='images/women_avatar1.jpg' alt='image')
-              .users-list-body
-                div
-                  h5 Jennica Kindred
-                  p
-                    i.fa.fa-video-camera.mr-1
-                    |                                         Video
-                .users-list-action
-                  small.text-muted 03:41 PM
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              div
-                figure.avatar
-                  span.avatar-title.bg-info.rounded-circle M
-              .users-list-body
-                div
-                  h5 Marvin Rohan
-                  p Have you prepared the files?
-                .users-list-action
-                  small.text-muted Yesterday
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              div
-                figure.avatar
-                  img.rounded-circle(src='images/women_avatar2.jpg' alt='image')
-              .users-list-body
-                div
-                  h5 Townsend Seary
-                  p Where are you?
-                .users-list-action
-                  small.text-muted 03:41 PM
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              div
-                figure.avatar
-                  span.avatar-title.bg-secondary.rounded-circle G
-              .users-list-body
-                div
-                  h5 Gibb Ivanchin
-                  p I want to visit them.
-                .users-list-action
-                  small.text-muted 03:41 PM
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              div
-                figure.avatar
-                  img.rounded-circle(src='images/man_avatar1.jpg' alt='image')
-              .users-list-body
-                div
-                  h5 Harald Kowalski
-                  p Reports are ready.
-                .users-list-action
-                  small.text-muted 03:41 PM
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              div
-                figure.avatar
-                  span.avatar-title.bg-success.rounded-circle A
-              .users-list-body
-                div
-                  h5 Afton McGilvra
-                  p I do not know where is it. Don&apos;t ask me, please.
-                .users-list-action
-                  small.text-muted 03:41 PM
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
-            li.list-group-item
-              div
-                figure.avatar
-                  img.rounded-circle(src='images/man_avatar2.jpg' alt='image')
-              .users-list-body
-                div
-                  h5 Alexandr Donnelly
-                  p Can anyone enter the meeting?
-                .users-list-action
-                  small.text-muted 03:41 PM
-                  .action-toggle
-                    .dropdown
-                      a(data-toggle='dropdown' href='#')
-                        i(data-feather='more-horizontal')
-                      .dropdown-menu.dropdown-menu-right
-                        a.dropdown-item(href='#') Open
-                        a.dropdown-item(href='#' data-navigation-target='contact-information') Profile
-                        a.dropdown-item(href='#') Add to archive
-                        .dropdown-divider
-                        a.dropdown-item.text-danger(href='#') Delete
+            each item in bongchat
+             li.list-group-item(iduserbongchat = item.id)
+               figure.avatar.avatar-state-success
+                 img.rounded-circle(src=item.avatar alt='image')
+               .users-list-body
+                  div
+                    h5.text-primary #{item.fullName}
+                    p What&apos;s up, how are you?
+                  .users-list-action
+                    .new-message-count 3
+                    small.text-primary 03:41 PM
+         
       // ./ Chats sidebar
       // Friends sidebar
       #friends.sidebar
@@ -958,10 +743,8 @@ head
                         a.dropdown-item(href='#') Restore
                         .dropdown-divider
                         a.dropdown-item.text-danger(href='#') Delete
-      // ./ Archived sidebar
-    // ./ sidebar group
-    // chat
-    .chat
+    if(data)
+     .chat
       .chat-header
         .chat-header-user
           figure.avatar
@@ -1154,10 +937,10 @@ head
 // ./ layout
 // Bundle
 script(type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js") 
-script(src='js/bundle.js')
-script(src='js/enjoyhint.min.js')
+script(src='/chat/js/bundle.js')
+script(src='/chat/js/enjoyhint.min.js')
 // App scripts
-script(src='js/app.min.js')
+script(src='/chat/js/app.min.js')
 // Examples
 //- script(src='js/examples.js')
 script(src="/socket.io/socket.io.js")

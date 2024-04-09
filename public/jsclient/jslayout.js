@@ -122,13 +122,14 @@ if(qualityincart){
     })
 }
 
-// const apiKey = 'AIzaSyDe-Qcz4E0mhdYbPRRJ8_u7jRBvHh3CSz0';
-// const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=Vietnam&key=${apiKey}`;
 
-// fetch(apiUrl)
-//   .then(response => response.json())
-//   .then(data => {
-//     // const vietnamCities = data.results[0].address_components.filter(component => component.types.includes('locality'));
-//     console.log(data);
-//   })
-//   .catch(error => console.error('Error fetching data:', error));
+const iduserchat = document.querySelector("[datauserid]")
+console.log(iduserchat)
+if(iduserchat){
+    const id = iduserchat.getAttribute("datauserid")
+    iduserchat.addEventListener("click",() => {
+        const form = document.querySelector("[submitchat]")
+        form.action = `/chat/${id}`
+        form.submit()
+    })
+}
