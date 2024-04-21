@@ -1,0 +1,121 @@
+extends ../../layout/index.pug
+include ../../mixi/mixi.pug
+block main
+      .pc-content(style="padding : 0;")
+        // [ breadcrumb ] start
+        .page-header
+          .page-block
+            .row.align-items-center
+              .col-md-12
+                .page-header-title
+                  h2.mb-0 Chi Tiêt Thông Tin
+        // [ breadcrumb ] end
+        // [ Main Content ] start
+        .row
+          // [ form-element ] start
+          .col-lg-12
+            .card
+              #sticky-action.sticky-action
+                .card-header
+                  .row.align-items-center
+                    .col-sm-6
+                      h5 Sticky Action Bar
+                    .col-sm-6.text-sm-end.mt-3.mt-sm-0
+                      button.btn.btn-success(type='reset') Submit
+                      button.btn.btn-light-secondary(type='reset') Cancel
+              .card-body
+                h5 Form controls
+                hr
+                .row
+                  .col-md-6
+                    form
+                      .mb-3
+                        label.form-label(for='exampleInputEmail1') Email address
+                        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email')
+                        small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+                      .mb-3
+                        label.form-label(for='exampleInputPassword1') Password
+                        input#exampleInputPassword1.form-control(type='password' placeholder='Password')
+                      .mb-3.form-check
+                        input#exampleCheck1.form-check-input(type='checkbox')
+                        label(for='exampleCheck1') Check me out
+                      button.btn.btn-primary.mb-4(type='submit') Submit
+                  .col-md-6
+                    form
+                      .mb-3
+                        label.form-label Text
+                        input.form-control(type='text' placeholder='Text')
+                      .mb-3
+                        label.form-label(for='exampleFormControlTextarea1') Example textarea
+                        textarea#exampleFormControlTextarea1.form-control(rows='3')
+                h5 Sizing
+                hr
+                .row
+                  .col-md-6
+                    input.mb-3.form-control.form-control-lg(type='text' placeholder='.form-control-lg')
+                    input.mb-3.form-control(type='text' placeholder='Default input')
+                    input.mb-3.form-control.form-control-sm(type='text' placeholder='.form-control-sm')
+                  .col-md-6
+                    select.mb-3.form-select.form-select-lg
+                      option Large select
+                    select.mb-3.form-select
+                      option Default select
+                h5 Inline
+                hr
+                form.row.row-cols-md-auto.g-3.align-items-center
+                  .col-12
+                    label.sr-only(for='inlineFormInputName') Name
+                    input#inlineFormInputName.form-control(type='text' placeholder='Jane Doe')
+                  .col-12
+                    label.sr-only(for='inlineFormInputGroupUsername') Username
+                    .input-group
+                      .input-group-text @
+                      input#inlineFormInputGroupUsername.form-control(type='text' placeholder='Username')
+                  .col-12
+                    label.sr-only(for='inlineFormSelectPref') Preference
+                    select#inlineFormSelectPref.form-select
+                      option(selected='') Choose...
+                      option(value='1') One
+                      option(value='2') Two
+                      option(value='3') Three
+                  .col-12
+                    .form-check
+                      input#inlineFormCheck.form-check-input(type='checkbox')
+                      label.form-check-label(for='inlineFormCheck')  Remember me 
+                  .col-12
+                    button.btn.btn-primary(type='submit') Submit
+                h5 Form Grid
+                hr
+                form
+                  .row
+                    .mb-3.col-md-6
+                      label.form-label(for='inputEmail4') Email
+                      input#inputEmail4.form-control(type='email' placeholder='Email')
+                    .mb-3.col-md-6
+                      label.form-label(for='inputPassword4') Password
+                      input#inputPassword4.form-control(type='password' placeholder='Password')
+                  .mb-3
+                    label.form-label(for='inputAddress') Address
+                    input#inputAddress.form-control(type='text' placeholder='1234 Main St')
+                  .mb-3
+                    label.form-label(for='inputAddress2') Address 2
+                    input#inputAddress2.form-control(type='text' placeholder='Apartment, studio, or floor')
+                  .row
+                    .mb-3.col-md-6
+                      label.form-label(for='inputCity') City
+                      input#inputCity.form-control(type='text')
+                    .mb-3.col-md-4
+                      label.form-label(for='inputState') State
+                      select#inputState.form-select
+                        option(selected='') select
+                        option Large select
+                    .mb-3.col-md-2
+                      label.form-label(for='inputZip') Zip
+                      input#inputZip.form-control(type='text')
+                  .mb-3
+                    .form-check
+                      input#gridCheck.form-check-input(type='checkbox')
+                      label.form-check-label(for='gridCheck') Check me out
+                  button.btn.btn-primary(type='submit') Sign in
+          // [ form-element ] end
+        // [ Main Content ] end
